@@ -16,6 +16,7 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.itemsIndexed
 import androidx.compose.material3.Button
@@ -42,13 +43,13 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
 
-            AnimateVisibility(countriesList)
+            AnimateVisibility(countriesList, setOf("white", "red", "yellow", "blue"))
         }
     }
 }
 
 @Composable
-fun AnimateVisibility(propertiesInput: List<Panstwo>) {
+fun AnimateVisibility(countries: List<Panstwo>, propertiesInput: Set<String>) {
     val filterString = "Filter"
     val wynikiString = "Wyniki"
     var properties by remember {
@@ -77,22 +78,25 @@ fun AnimateVisibility(propertiesInput: List<Panstwo>) {
             buttonText = wynikiString
             Card() {
                 Column {
-                    properties.forEach { country ->
-                        Row(modifier = Modifier.padding(8.dp)) {
+                    properties.forEach { property ->
+                        Row(modifier = Modifier
+                            .padding(8.dp)
+                            .fillMaxWidth(0.5f)
+                        ) {
                             val checkedState = remember { mutableStateOf(false) }
 
                             Checkbox(
                                 checked = checkedState.value,
                                 onCheckedChange = { checkedState.value = it },
-                                modifier = Modifier.padding(end = 8.dp)
+                                modifier = Modifier.padding(end = 8.dp),
                             )
-                            Text(text = country.name)
+                            Text(text = property)
 
                             LaunchedEffect(checkedState.value) {
                                 if (checkedState.value) {
-                                    propertiesSelected.add(country.name)
+                                    propertiesSelected.add(property)
                                 } else {
-                                    propertiesSelected.remove(country.name)
+                                    propertiesSelected.remove(property)
                                 }
                             }
                         }
@@ -114,18 +118,26 @@ fun AnimateVisibility(propertiesInput: List<Panstwo>) {
 
                 ) {
                 LazyColumn {
+                    var filterList = mutableSetOf<String>()
+                    for(i in propertiesSelected){
+                        filterList.add(i)
+                    }
                     itemsIndexed(
-                        propertiesSelected
+                        filter(countriesList, filterList)
                     ) { index, string ->
-                        Text(
-                            text = "$string",
-                            fontSize = 24.sp,
-                            fontWeight = FontWeight.Bold,
-                            textAlign = TextAlign.Center,
-                            modifier = Modifier
-                                .fillMaxWidth()
-                                .padding(vertical = 24.dp)
-                        )
+                        Card(
+
+                        ){
+                            Text(
+                                text = string.name,
+                                fontSize = 24.sp,
+                                fontWeight = FontWeight.Bold,
+                                textAlign = TextAlign.Center,
+                                modifier = Modifier
+                                    .fillMaxWidth()
+                                    .padding(vertical = 24.dp)
+                            )
+                        }
                     }
                 }
             }
