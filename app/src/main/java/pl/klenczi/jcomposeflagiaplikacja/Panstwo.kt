@@ -6,8 +6,8 @@ data class Panstwo(
     var image: Int
     )
 
-var polska = Panstwo("Polska",mutableSetOf("white", "red", "horizontal"), 1)
-var niemcy = Panstwo("Niemcy", mutableSetOf("black", "red", "yellow", "horizontal"), 1)
-var estonia = Panstwo("Estonia", mutableSetOf("black", "white", "blue", "horizontal"), 1)
+var polska = Panstwo("Polska",mutableSetOf("white", "red", "horizontal"), R.drawable.polska)
+var niemcy = Panstwo("Niemcy", mutableSetOf("black", "red", "yellow", "horizontal"), R.drawable.niemcy)
+var estonia = Panstwo("Estonia", mutableSetOf("black", "white", "blue", "horizontal"), R.drawable.estonia)
 
 val countriesList = mutableListOf(polska, niemcy, estonia)
