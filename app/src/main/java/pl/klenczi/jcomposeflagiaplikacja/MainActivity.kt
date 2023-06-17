@@ -15,6 +15,7 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
@@ -85,7 +86,10 @@ fun AnimateVisibility(countries: List<Panstwo>, propertiesInput: Set<String>) {
                     shrinkVertically(animationSpec = tween(animationDuration + 200))
         ) {
             buttonText = wynikiString
-            Card() {
+            Card(modifier = Modifier
+                .fillMaxWidth(0.85f)
+                .fillMaxHeight(0.85f)
+            ) {
                 Column {
                     properties.forEach { property ->
                         Row(
@@ -165,8 +169,9 @@ fun AnimateVisibility(countries: List<Panstwo>, propertiesInput: Set<String>) {
             buttonText = filterString
             Card(
                 modifier = Modifier
-                    .background(Color(0xf5f5f5f5)),
-
+                    .background(Color(0xf5f5f5f5))
+                    .fillMaxWidth(0.95f)
+                    .fillMaxHeight(0.9f)
                 ) {
                 LazyColumn {
                     var filterList = mutableSetOf<String>()
@@ -185,7 +190,7 @@ fun AnimateVisibility(countries: List<Panstwo>, propertiesInput: Set<String>) {
                                 modifier = Modifier
                                     .width(100.dp)
                                     .height(100.dp)
-                                    .padding(vertical = 10.dp)
+                                    .padding(start = 15.dp)
                             )
                             Text(
                                 text = country.name,
@@ -202,16 +207,17 @@ fun AnimateVisibility(countries: List<Panstwo>, propertiesInput: Set<String>) {
                 }
             }
         }
-        Button(
-            onClick = {
-                visible = !visible
-                propertiesSelected.forEach { country ->
-                    println("Wybrany kraj: $country")
-                }
-            },
-            modifier = Modifier.fillMaxWidth()
-        ) {
-            Text(buttonText, textAlign = TextAlign.Center)
-        }
+    }
+    Button(
+        onClick = {
+            visible = !visible
+            propertiesSelected.forEach { country ->
+                println("Wybrany kraj: $country")
+            }
+        },
+        modifier = Modifier
+            .fillMaxWidth()
+    ) {
+        Text(buttonText, textAlign = TextAlign.Center)
     }
 }
