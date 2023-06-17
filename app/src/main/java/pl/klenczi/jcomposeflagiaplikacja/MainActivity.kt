@@ -21,8 +21,6 @@ import androidx.compose.foundation.lazy.itemsIndexed
 import androidx.compose.material3.Button
 import androidx.compose.material3.Card
 import androidx.compose.material3.Checkbox
-import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
@@ -36,28 +34,27 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import pl.klenczi.jcomposeflagiaplikacja.ui.theme.JComposeFlagiAplikacjaTheme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            AnimateVisibility(/*listOf("Polska", "Anglia")*/)
+
+            AnimateVisibility(countriesList)
         }
     }
 }
 
 @Composable
-fun AnimateVisibility(/*countries: List<String>*/) {
+fun AnimateVisibility(propertiesInput: List<Panstwo>) {
     val filterString = "Filter"
     val wynikiString = "Wyniki"
-    var countries by remember {
-        mutableStateOf(mutableStateListOf("Polska", "Anglia", "Francja"))
+    var properties by remember {
+        mutableStateOf(propertiesInput)
     }
-    val countriesSelected = remember {
+    val propertiesSelected = remember {
         mutableStateListOf<String>()
     }
     var visible by remember {
@@ -70,8 +67,6 @@ fun AnimateVisibility(/*countries: List<String>*/) {
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally) {
 
-        var counteriesSelected = mutableListOf<String>()
-        val checkedState = remember { mutableStateOf(false) }
         AnimatedVisibility( //filter
             visible = visible,
             enter = fadeIn(animationSpec = tween(700)) +
@@ -79,12 +74,10 @@ fun AnimateVisibility(/*countries: List<String>*/) {
             exit = fadeOut(animationSpec = tween(700)) +
                     shrinkVertically (animationSpec = tween(700))
         ) {
-            //buttonText = wynikiString
+            buttonText = wynikiString
             Card() {
-
-                // Stan, w którym przechowujemy informacje o klikniętych checkboxach
                 Column {
-                    countries.forEach { country ->
+                    properties.forEach { country ->
                         Row(modifier = Modifier.padding(8.dp)) {
                             val checkedState = remember { mutableStateOf(false) }
 
@@ -93,13 +86,13 @@ fun AnimateVisibility(/*countries: List<String>*/) {
                                 onCheckedChange = { checkedState.value = it },
                                 modifier = Modifier.padding(end = 8.dp)
                             )
-                            Text(text = country)
+                            Text(text = country.name)
 
                             LaunchedEffect(checkedState.value) {
                                 if (checkedState.value) {
-                                    countriesSelected.add(country)
+                                    propertiesSelected.add(country.name)
                                 } else {
-                                    countriesSelected.remove(country)
+                                    propertiesSelected.remove(country.name)
                                 }
                             }
                         }
@@ -108,13 +101,13 @@ fun AnimateVisibility(/*countries: List<String>*/) {
             }
         }
         AnimatedVisibility( //wyniki
-            visible = !visible,
             enter = fadeIn(animationSpec = tween(700)) +
                     expandVertically (animationSpec = tween(700)),
             exit = fadeOut(animationSpec = tween(700)) +
-                    shrinkVertically (animationSpec = tween(700))
+                    shrinkVertically (animationSpec = tween(700)),
+            visible = !visible
         ) {
-            //buttonText = filterString
+            buttonText = filterString
             Card(
                 modifier = Modifier
                     .background(Color(0xf5f5f5f5)),
@@ -122,7 +115,7 @@ fun AnimateVisibility(/*countries: List<String>*/) {
                 ) {
                 LazyColumn {
                     itemsIndexed(
-                        countriesSelected
+                        propertiesSelected
                     ) { index, string ->
                         Text(
                             text = "$string",
@@ -140,7 +133,7 @@ fun AnimateVisibility(/*countries: List<String>*/) {
         Button(
             onClick = {
                 visible = !visible
-                countriesSelected.forEach { country ->
+                propertiesSelected.forEach { country ->
                     println("Wybrany kraj: $country")
                 }},
             modifier = Modifier.fillMaxWidth()
