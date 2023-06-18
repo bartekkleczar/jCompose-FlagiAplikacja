@@ -57,7 +57,7 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            AnimateVisibility(countriesList, setOf("white", "red", "yellow", "blue", "black", "orange"))
+            AnimateVisibility(countriesList, setOf("white", "red", "yellow", "blue", "black", "orange", "green"))
         }
     }
 }
@@ -96,7 +96,7 @@ fun AnimateVisibility(countries: MutableList<Panstwo>, propertiesInput: Set<Stri
             buttonText = wynikiString
             Column(modifier = Modifier
                 .fillMaxWidth(0.7f)
-                .fillMaxHeight(0.8f),
+                .fillMaxHeight(0.85f),
                 horizontalAlignment = Alignment.CenterHorizontally,
                 verticalArrangement = Arrangement.SpaceEvenly
             ) {
@@ -133,7 +133,7 @@ fun AnimateVisibility(countries: MutableList<Panstwo>, propertiesInput: Set<Stri
                         }
                     }
                 }
-                Spacer(modifier = Modifier.height(15.dp))
+                Spacer(modifier = Modifier.height(5.dp))
                 Column {
                     setOf<String>("horizontal", "vertical", "cross", "other").forEach { property ->
                         Row(

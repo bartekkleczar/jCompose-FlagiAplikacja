@@ -14,7 +14,7 @@ var bialorus = Panstwo("Bialorus", mutableSetOf("red", "green", "horizontal"), R
 var bosnia = Panstwo("Bosnia i Hercegowina", mutableSetOf("blue", "yellow", "white", "other"), R.drawable.bosnia)
 var bulgaria = Panstwo("Bułgaria", mutableSetOf("white", "green", "red", "horizontal"), R.drawable.bulgaria)
 var chorwacja = Panstwo("Chorwacja", mutableSetOf("red", "white", "blue", "horizontal"), R.drawable.chorwacja)
-var cypr = Panstwo("Cypr", mutableSetOf("white", "blue", "other"), R.drawable.cypr)
+var cypr = Panstwo("Cypr", mutableSetOf("white", "yellow", "other"), R.drawable.cypr)
 var czarnogora = Panstwo("Czarnogora", mutableSetOf("red", "yellow", "other"), R.drawable.czarnogora)
 var czechy = Panstwo("Czechy", mutableSetOf("white", "red", "other"), R.drawable.czechy)
 var dania = Panstwo("Dania", mutableSetOf("red", "white", "cross"), R.drawable.dania)
@@ -50,41 +50,57 @@ var szwecja = Panstwo("Szwecja", mutableSetOf("blue", "yellow", "cross"), R.draw
 var turcja = Panstwo("Turcja", mutableSetOf("red", "white", "other"), R.drawable.turcja)
 var ukraina = Panstwo("Ukraina", mutableSetOf("blue", "yellow", "horizontal"), R.drawable.ukraina)
 var wegry = Panstwo("Węgry", mutableSetOf("red", "white", "green", "horizontal"), R.drawable.wegry)
-var wielka_brytania = Panstwo("Wielka Brytania", mutableSetOf("red", "white", "blue", "cross"), R.drawable.wielkabrytania)
+var wielkabrytania = Panstwo("Wielka Brytania", mutableSetOf("red", "white", "blue", "cross"), R.drawable.wielkabrytania)
 var wlochy = Panstwo("Włochy", mutableSetOf("green", "white", "red", "vertical"), R.drawable.wlochy)
 
-var argentina = Panstwo("Argentyna", mutableSetOf("blue", "white"), R.drawable.argentyna)
-var bahamy = Panstwo("Bahamy", mutableSetOf("blue", "yellow"), R.drawable.bahamy)
-var belize = Panstwo("Belize", mutableSetOf("red", "blue"), R.drawable.belize)
-var boliwia = Panstwo("Boliwia", mutableSetOf("red", "yellow", "green"), R.drawable.boliwia)
-var brazylia = Panstwo("Brazylia", mutableSetOf("green", "yellow"), R.drawable.brazylia)
-var chili = Panstwo("Chile", mutableSetOf("red", "white", "blue"), R.drawable.chile)
-var ekwador = Panstwo("Ekwador", mutableSetOf("yellow", "blue", "red"), R.drawable.ekwador)
-var gujana = Panstwo("Gujana", mutableSetOf("green", "yellow", "black"), R.drawable.gujana)
-var jamajka = Panstwo("Jamajka", mutableSetOf("green", "yellow", "black"), R.drawable.jamajka)
-var kanada = Panstwo("Kanada", mutableSetOf("red", "white"), R.drawable.kanada)
-var kolumbia = Panstwo("Kolumbia", mutableSetOf("yellow", "blue", "red"), R.drawable.kolumbia)
-var kostaryka = Panstwo("Kostaryka", mutableSetOf("blue", "white", "red"), R.drawable.kostaryka)
-var kuba = Panstwo("Kuba", mutableSetOf("red", "blue", "white"), R.drawable.kuba)
-var meksyk = Panstwo("Meksyk", mutableSetOf("green", "white", "red"), R.drawable.meksyk)
-var panama = Panstwo("Panama", mutableSetOf("red", "white", "blue"), R.drawable.panama)
-var paragwaj = Panstwo("Paragwaj", mutableSetOf("red", "white", "blue"), R.drawable.paragwaj)
-var peru = Panstwo("Peru", mutableSetOf("red", "white"), R.drawable.peru)
-var stanyzjednoczone = Panstwo("Stany Zjednoczone", mutableSetOf("red", "white", "blue"), R.drawable.stanyzjednoczone)
-var surinam = Panstwo("Surinam", mutableSetOf("green", "yellow", "red"), R.drawable.surinam)
-var urugwaj = Panstwo("Urugwaj", mutableSetOf("white", "blue"), R.drawable.urugwaj)
-var wenezuela = Panstwo("Wenezuela", mutableSetOf("yellow", "blue", "red"), R.drawable.wenezuela)
+var argentina = Panstwo("Argentyna", mutableSetOf("blue", "white", "horizontal"), R.drawable.argentyna)
+var bahamy = Panstwo("Bahamy", mutableSetOf("blue", "yellow", "black", "horizontal", "other"), R.drawable.bahamy)
+var barbados = Panstwo("Bahamy", mutableSetOf("blue", "yellow", "black", "vertical"), R.drawable.barbados)
+var belize = Panstwo("Belize", mutableSetOf("red", "blue", "horizontal", "other"), R.drawable.belize)
+var boliwia = Panstwo("Boliwia", mutableSetOf("red", "yellow", "green", "horizontal"), R.drawable.boliwia)
+var brazylia = Panstwo("Brazylia", mutableSetOf("green", "yellow", "other"), R.drawable.brazylia)
+var chili = Panstwo("Chile", mutableSetOf("red", "white", "blue", "horizontal", "other"), R.drawable.chile)
+var ekwador = Panstwo("Ekwador", mutableSetOf("yellow", "blue", "red", "horizontal"), R.drawable.ekwador)
+var gujana = Panstwo("Gujana", mutableSetOf("green", "yellow", "black", "other"), R.drawable.gujana)
+var jamajka = Panstwo("Jamajka", mutableSetOf("green", "yellow", "black", "cross"), R.drawable.jamajka)
+var kanada = Panstwo("Kanada", mutableSetOf("red", "white", "vertical"), R.drawable.kanada)
+var kolumbia = Panstwo("Kolumbia", mutableSetOf("yellow", "blue", "red", "horizontal"), R.drawable.kolumbia)
+var kostaryka = Panstwo("Kostaryka", mutableSetOf("blue", "white", "red", "horizontal"), R.drawable.kostaryka)
+var kuba = Panstwo("Kuba", mutableSetOf("red", "blue", "white", "horizontal", "other"), R.drawable.kuba)
+var meksyk = Panstwo("Meksyk", mutableSetOf("green", "white", "red", "vertical"), R.drawable.meksyk)
+var panama = Panstwo("Panama", mutableSetOf("red", "white", "blue", "other"), R.drawable.panama)
+var paragwaj = Panstwo("Paragwaj", mutableSetOf("red", "white", "blue", "horizontal"), R.drawable.paragwaj)
+var peru = Panstwo("Peru", mutableSetOf("red", "white", "vertical"), R.drawable.peru)
+var stanyzjednoczone = Panstwo("Stany Zjednoczone", mutableSetOf("red", "white", "blue", "horizontal", "other"), R.drawable.stanyzjednoczone)
+var surinam = Panstwo("Surinam", mutableSetOf("green", "yellow", "red", "horizontal"), R.drawable.surinam)
+var urugwaj = Panstwo("Urugwaj", mutableSetOf("white", "blue", "horizontal", "other"), R.drawable.urugwaj)
+var wenezuela = Panstwo("Wenezuela", mutableSetOf("yellow", "blue", "red", "horizontal"), R.drawable.wenezuela)
+var antiguabarbuda = Panstwo("Antigua i Barbuda", mutableSetOf("red", "blue", "other"), R.drawable.antiguabarbuda)
+var dominika = Panstwo("Dominika", mutableSetOf("green", "yellow", "cross"), R.drawable.dominika)
+var dominikana = Panstwo("Dominikana", mutableSetOf("red", "white", "blue", "cross"), R.drawable.dominikana)
+var grenada = Panstwo("Grenada", mutableSetOf("red", "yellow", "green", "other"), R.drawable.grenada)
+var gwatemala = Panstwo("Gwatemala", mutableSetOf("blue", "white", "blue", "vertical"), R.drawable.gwatemala)
+var haiti = Panstwo("Haiti", mutableSetOf("blue", "red", "horizontal"), R.drawable.haiti)
+var honduras = Panstwo("Honduras", mutableSetOf("blue", "white", "horizontal"), R.drawable.honduras)
+var nikaragua = Panstwo("Nikaragua", mutableSetOf("blue", "white", "horizontal"), R.drawable.nikaragua)
+var stkittsnevis = Panstwo("St. Kitts i Nevis", mutableSetOf("green", "yellow", "black", "other"), R.drawable.stkittsnevis)
+var stlucia = Panstwo("St. Lucia", mutableSetOf("blue", "yellow", "black", "other"), R.drawable.stlucia)
+var stvimcentgrenadyny = Panstwo("St. Vimcent Grenadyny", mutableSetOf("blue", "green", "yellow", "vertical"), R.drawable.stvimcentgrenadyny)
+var salwador = Panstwo("Salwador", mutableSetOf("blue", "white", "blue", "horizontal"), R.drawable.salwador)
 
 val countriesList = mutableListOf(
     albania,
     andora,
+    antiguabarbuda,
     argentina,
     austria,
     bahamy,
+    barbados,
     belgia,
     belize,
     bialorus,
     boliwia,
+    bosnia,
     brazylia,
     bulgaria,
     chorwacja,
@@ -93,15 +109,19 @@ val countriesList = mutableListOf(
     czarnogora,
     czechy,
     dania,
+    dominika,
+    dominikana,
     ekwador,
     estonia,
     finlandia,
     francja,
     gibraltar,
     grecja,
+    grenada,
     gujana,
-    hiszpania,
-    holandia,
+    gwatemala,
+    haiti,
+    honduras,
     irlandia,
     islandia,
     jamajka,
@@ -117,6 +137,7 @@ val countriesList = mutableListOf(
     macedonia,
     meksyk,
     monako,
+    nikaragua,
     niemcy,
     norwegia,
     panama,
@@ -126,10 +147,14 @@ val countriesList = mutableListOf(
     portugalia,
     rosja,
     rumunia,
+    salwador,
     sanmarino,
     serbia,
     slowacja,
     slowenia,
+    stkittsnevis,
+    stlucia,
+    stvimcentgrenadyny,
     stanyzjednoczone,
     surinam,
     szkocja,
@@ -139,7 +164,7 @@ val countriesList = mutableListOf(
     ukraina,
     urugwaj,
     wegry,
-    wielka_brytania,
+    wielkabrytania,
     wenezuela,
     wlochy
 )
