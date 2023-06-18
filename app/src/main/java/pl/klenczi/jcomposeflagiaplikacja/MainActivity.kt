@@ -4,14 +4,19 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.animation.AnimatedVisibility
+import androidx.compose.animation.ExperimentalAnimationApi
 import androidx.compose.animation.core.tween
 import androidx.compose.animation.expandVertically
 import androidx.compose.animation.fadeIn
 import androidx.compose.animation.fadeOut
 import androidx.compose.animation.shrinkVertically
+import androidx.compose.animation.scaleIn
+import androidx.compose.animation.scaleOut
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
+import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -23,7 +28,9 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.itemsIndexed
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Button
+import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Card
 import androidx.compose.material3.Checkbox
 import androidx.compose.material3.Text
@@ -50,14 +57,15 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            AnimateVisibility(countriesList, setOf("white", "red", "yellow", "blue", "black"))
+            AnimateVisibility(countriesList, setOf("white", "red", "yellow", "blue", "black", "orange"))
         }
     }
 }
 
+@OptIn(ExperimentalAnimationApi::class)
 @Composable
-fun AnimateVisibility(countries: List<Panstwo>, propertiesInput: Set<String>) {
-    val animationDuration = 500
+fun AnimateVisibility(countries: MutableList<Panstwo>, propertiesInput: Set<String>) {
+    val animationDuration = 700
     val filterString = "Filter"
     val wynikiString = "Wyniki"
     var properties by remember {
@@ -80,21 +88,23 @@ fun AnimateVisibility(countries: List<Panstwo>, propertiesInput: Set<String>) {
 
         AnimatedVisibility( //filter
             visible = visible,
-            enter = fadeIn(animationSpec = tween(animationDuration)) +
+            enter = scaleIn(animationSpec = tween(animationDuration)) +
                     expandVertically(animationSpec = tween(animationDuration)),
-            exit = fadeOut(animationSpec = tween(animationDuration + 200)) +
-                    shrinkVertically(animationSpec = tween(animationDuration + 200))
+            exit = scaleOut(animationSpec = tween(animationDuration)) +
+                    shrinkVertically(animationSpec = tween(animationDuration))
         ) {
             buttonText = wynikiString
-            Card(modifier = Modifier
-                .fillMaxWidth(0.85f)
-                .fillMaxHeight(0.85f)
+            Column(modifier = Modifier
+                .fillMaxWidth(0.7f)
+                .fillMaxHeight(0.8f),
+                horizontalAlignment = Alignment.CenterHorizontally,
+                verticalArrangement = Arrangement.SpaceEvenly
             ) {
                 Column {
                     properties.forEach { property ->
                         Row(
                             modifier = Modifier
-                                .padding(8.dp)
+                                .padding(4.dp)
                                 .fillMaxWidth(0.5f)
                         ) {
                             val checkedState = remember { mutableStateOf(false) }
@@ -123,12 +133,12 @@ fun AnimateVisibility(countries: List<Panstwo>, propertiesInput: Set<String>) {
                         }
                     }
                 }
-                Spacer(modifier = Modifier.height(30.dp))
+                Spacer(modifier = Modifier.height(15.dp))
                 Column {
                     setOf<String>("horizontal", "vertical", "cross", "other").forEach { property ->
                         Row(
                             modifier = Modifier
-                                .padding(8.dp)
+                                .padding(4.dp)
                                 .fillMaxWidth(0.5f)
                         ) {
                             val checkedState = remember { mutableStateOf(false) }
@@ -160,26 +170,39 @@ fun AnimateVisibility(countries: List<Panstwo>, propertiesInput: Set<String>) {
             }
         }
         AnimatedVisibility( //wyniki
-            enter = fadeIn(animationSpec = tween(animationDuration + 200)) +
-                    expandVertically(animationSpec = tween(animationDuration + 200)),
-            exit = fadeOut(animationSpec = tween(animationDuration)) +
+            enter = scaleIn(animationSpec = tween(animationDuration)) +
+                    expandVertically(animationSpec = tween(animationDuration)),
+            exit = scaleOut(animationSpec = tween(animationDuration)) +
                     shrinkVertically(animationSpec = tween(animationDuration)),
             visible = !visible
         ) {
             buttonText = filterString
-            Card(
+            Column(
                 modifier = Modifier
-                    .background(Color(0xf5f5f5f5))
-                    .fillMaxWidth(0.95f)
+                    .fillMaxWidth(0.9f)
                     .fillMaxHeight(0.9f)
+                    .padding(bottom = 20.dp),
+                horizontalAlignment = Alignment.CenterHorizontally,
+                verticalArrangement = Arrangement.SpaceEvenly
                 ) {
+                val filterList by remember {
+                    mutableStateOf(mutableSetOf<String>())
+                }
+                Text(
+                    text = "Count: ${filter(countries, filterList).size}",
+                    fontSize = 24.sp,
+                    fontWeight = FontWeight.Bold,
+                    color = Color.Black,
+                    textAlign = TextAlign.Center,
+                    modifier = Modifier
+                        .fillMaxWidth()
+                )
                 LazyColumn {
-                    var filterList = mutableSetOf<String>()
                     for (i in propertiesSelected) {
                         filterList.add(i)
                     }
                     itemsIndexed(
-                        filter(countriesList, filterList)
+                        filter(countries, filterList)
                     ) { index, country ->
                         Row(
                             modifier = Modifier.height(100.dp)
@@ -208,16 +231,20 @@ fun AnimateVisibility(countries: List<Panstwo>, propertiesInput: Set<String>) {
             }
         }
     }
-    Button(
-        onClick = {
-            visible = !visible
-            propertiesSelected.forEach { country ->
-                println("Wybrany kraj: $country")
-            }
-        },
+    Box(
         modifier = Modifier
-            .fillMaxWidth()
-    ) {
-        Text(buttonText, textAlign = TextAlign.Center)
+            .fillMaxSize(),
+        contentAlignment = Alignment.BottomCenter
+    ){
+        Button(
+            onClick = {
+                visible = !visible
+            },
+            modifier = Modifier
+                .fillMaxWidth(),
+            colors = ButtonDefaults.buttonColors(Color.Black)
+        ) {
+            Text(buttonText, textAlign = TextAlign.Center)
+        }
     }
 }
