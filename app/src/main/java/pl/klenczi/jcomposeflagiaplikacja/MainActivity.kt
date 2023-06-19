@@ -50,132 +50,184 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            val r = resources 
-            val albania = Panstwo(getString(R.string.country_albania), mutableSetOf(r.getString(R.string.color_red), r.getString(R.string.color_black), r.getString(R.string.shape_other)), R.drawable.albania)
-            val andora = Panstwo(getString(R.string.country_andora), mutableSetOf(r.getString(R.string.color_blue), r.getString(R.string.color_yellow), r.getString(R.string.orientation_vertical)), R.drawable.andora)
-            val austria = Panstwo(getString(R.string.country_austria), mutableSetOf(r.getString(R.string.color_red), r.getString(R.string.color_white), r.getString(R.string.orientation_horizontal)), R.drawable.austria)
-            val belgia = Panstwo(getString(R.string.country_belgia), mutableSetOf(r.getString(R.string.color_black), r.getString(R.string.color_yellow), r.getString(R.string.color_red), r.getString(R.string.orientation_vertical)), R.drawable.belgia)
-            val bialorus = Panstwo(getString(R.string.country_bialorus), mutableSetOf(r.getString(R.string.color_red), r.getString(R.string.color_green), r.getString(R.string.orientation_horizontal)), R.drawable.bialorus)
-            val bosnia = Panstwo(getString(R.string.country_bosnia), mutableSetOf(r.getString(R.string.color_blue), r.getString(R.string.color_yellow), r.getString(R.string.color_white), r.getString(R.string.shape_other)), R.drawable.bosnia)
-            val bulgaria = Panstwo(getString(R.string.country_bulgaria), mutableSetOf(r.getString(R.string.color_white), r.getString(R.string.color_green), r.getString(R.string.color_red), r.getString(R.string.orientation_horizontal)), R.drawable.bulgaria)
-            val chorwacja = Panstwo(getString(R.string.country_chorwacja), mutableSetOf(r.getString(R.string.color_red), r.getString(R.string.color_white), r.getString(R.string.color_blue), r.getString(R.string.orientation_horizontal)), R.drawable.chorwacja)
-            val cypr = Panstwo(getString(R.string.country_cypr), mutableSetOf(r.getString(R.string.color_white), r.getString(R.string.color_yellow), r.getString(R.string.shape_other)), R.drawable.cypr)
-            val czarnogora = Panstwo(getString(R.string.country_czarnogora), mutableSetOf(r.getString(R.string.color_red), r.getString(R.string.color_yellow), r.getString(R.string.shape_other)), R.drawable.czarnogora)
-            val czechy = Panstwo(getString(R.string.country_czechy), mutableSetOf(r.getString(R.string.color_white), r.getString(R.string.color_red), r.getString(R.string.shape_other)), R.drawable.czechy)
-            val dania = Panstwo(getString(R.string.country_dania), mutableSetOf(r.getString(R.string.color_red), r.getString(R.string.color_white), r.getString(R.string.shape_cross)), R.drawable.dania)
-            val estonia = Panstwo(getString(R.string.country_estonia), mutableSetOf(r.getString(R.string.color_blue), r.getString(R.string.color_black), r.getString(R.string.color_white), r.getString(R.string.orientation_horizontal)), R.drawable.estonia)
-            val finlandia = Panstwo(getString(R.string.country_finlandia), mutableSetOf(r.getString(R.string.color_blue), r.getString(R.string.color_white), r.getString(R.string.shape_cross)), R.drawable.finlandia)
-            val francja = Panstwo(getString(R.string.country_francja), mutableSetOf(r.getString(R.string.color_blue), r.getString(R.string.color_white), r.getString(R.string.color_red), r.getString(R.string.orientation_vertical)), R.drawable.francja)
-            val gibraltar = Panstwo(getString(R.string.country_gibraltar), mutableSetOf(r.getString(R.string.color_white), r.getString(R.string.color_red), r.getString(R.string.shape_other)), R.drawable.giblartar)
-            val grecja = Panstwo(getString(R.string.country_grecja), mutableSetOf(r.getString(R.string.color_blue), r.getString(R.string.color_white), r.getString(R.string.shape_other)), R.drawable.grecja)
-            val hiszpania = Panstwo(getString(R.string.country_hiszpania), mutableSetOf(r.getString(R.string.color_red), r.getString(R.string.color_yellow), r.getString(R.string.orientation_horizontal)), R.drawable.hiszpania)
-            val holandia = Panstwo(getString(R.string.country_holandia), mutableSetOf(r.getString(R.string.color_red), r.getString(R.string.color_white), r.getString(R.string.color_blue), r.getString(R.string.orientation_horizontal)), R.drawable.holandia)
-            val irlandia = Panstwo(getString(R.string.country_irlandia), mutableSetOf(r.getString(R.string.color_green), r.getString(R.string.color_white), r.getString(R.string.color_orange), r.getString(R.string.orientation_vertical)), R.drawable.irlandia)
-            val islandia = Panstwo(getString(R.string.country_islandia), mutableSetOf(r.getString(R.string.color_blue), r.getString(R.string.color_red), r.getString(R.string.color_white), r.getString(R.string.shape_cross)), R.drawable.islandia)
-            val liechtenstein = Panstwo(getString(R.string.country_liechtenstein), mutableSetOf(r.getString(R.string.color_blue), r.getString(R.string.color_red), r.getString(R.string.orientation_horizontal)), R.drawable.liechtenstein)
-            val litwa = Panstwo(getString(R.string.country_litwa), mutableSetOf(r.getString(R.string.color_yellow), r.getString(R.string.color_green), r.getString(R.string.color_red), r.getString(R.string.orientation_horizontal)), R.drawable.litwa)
-            val luksemburg = Panstwo(getString(R.string.country_luksemburg), mutableSetOf(r.getString(R.string.color_red), r.getString(R.string.color_white), r.getString(R.string.color_blue), r.getString(R.string.orientation_horizontal)), R.drawable.luksemburg)
-            val lotwa = Panstwo(getString(R.string.country_lotwa), mutableSetOf(r.getString(R.string.color_red), r.getString(R.string.color_white), r.getString(R.string.orientation_horizontal)), R.drawable.lotwa)
-            val malta = Panstwo(getString(R.string.country_malta), mutableSetOf(r.getString(R.string.color_red), r.getString(R.string.color_white), r.getString(R.string.orientation_vertical)), R.drawable.malta)
-            val macedonia = Panstwo(getString(R.string.country_macedonia), mutableSetOf(r.getString(R.string.color_red), r.getString(R.string.color_yellow), r.getString(R.string.shape_other)), R.drawable.macedonia)
-            val monako = Panstwo(getString(R.string.country_monako), mutableSetOf(r.getString(R.string.color_red), r.getString(R.string.color_white), r.getString(R.string.orientation_horizontal)), R.drawable.monako)
-            val niemcy = Panstwo(getString(R.string.country_niemcy), mutableSetOf(r.getString(R.string.color_black), r.getString(R.string.color_red), r.getString(R.string.color_yellow), r.getString(R.string.orientation_horizontal)), R.drawable.niemcy)
-            val norwegia = Panstwo(getString(R.string.country_norwegia), mutableSetOf(r.getString(R.string.color_red), r.getString(R.string.color_white), r.getString(R.string.color_blue), r.getString(R.string.shape_cross)), R.drawable.norwegia)
-            val portugalia = Panstwo(getString(R.string.country_portugalia), mutableSetOf(r.getString(R.string.color_green), r.getString(R.string.color_red), r.getString(R.string.orientation_vertical)), R.drawable.portugalia)
-            val polska = Panstwo(getString(R.string.country_polska),mutableSetOf(r.getString(R.string.color_white), r.getString(R.string.color_red), r.getString(R.string.orientation_horizontal)), R.drawable.polska)
-            val rosja = Panstwo(getString(R.string.country_rosja), mutableSetOf(r.getString(R.string.color_white), r.getString(R.string.color_blue), r.getString(R.string.color_red), r.getString(R.string.orientation_horizontal)), R.drawable.rosja)
-            val rumunia = Panstwo(getString(R.string.country_rumunia), mutableSetOf(r.getString(R.string.color_blue), r.getString(R.string.color_yellow), r.getString(R.string.color_red), r.getString(R.string.orientation_vertical)), R.drawable.rumunia)
-            val sanmarino = Panstwo(getString(R.string.country_sanmarino), mutableSetOf(r.getString(R.string.color_white), r.getString(R.string.color_blue), r.getString(R.string.orientation_vertical)), R.drawable.sanmarino)
-            val serbia = Panstwo(getString(R.string.country_serbia), mutableSetOf(r.getString(R.string.color_red), r.getString(R.string.color_blue), r.getString(R.string.color_white), r.getString(R.string.orientation_horizontal)), R.drawable.serbia)
-            val slowacja = Panstwo(getString(R.string.country_slowacja), mutableSetOf(r.getString(R.string.color_white), r.getString(R.string.color_blue), r.getString(R.string.color_red), r.getString(R.string.orientation_horizontal)), R.drawable.slowacja)
-            val slowenia = Panstwo(getString(R.string.country_slowenia), mutableSetOf(r.getString(R.string.color_white), r.getString(R.string.color_blue), r.getString(R.string.color_red), r.getString(R.string.orientation_horizontal)), R.drawable.slowenia)
-            val szkocja = Panstwo(getString(R.string.country_szkocja), mutableSetOf(r.getString(R.string.color_blue), r.getString(R.string.color_white), r.getString(R.string.shape_cross)), R.drawable.szkocja)
-            val szwajcaria = Panstwo(getString(R.string.country_szwajcaria), mutableSetOf(r.getString(R.string.color_red), r.getString(R.string.color_white), r.getString(R.string.shape_cross)), R.drawable.szwajcaria)
-            val szwecja = Panstwo(getString(R.string.country_szwecja), mutableSetOf(r.getString(R.string.color_blue), r.getString(R.string.color_yellow), r.getString(R.string.shape_cross)), R.drawable.szwecja)
-            val turcja = Panstwo(getString(R.string.country_turcja), mutableSetOf(r.getString(R.string.color_red), r.getString(R.string.color_white), r.getString(R.string.shape_other)), R.drawable.turcja)
-            val ukraina = Panstwo(getString(R.string.country_ukraina), mutableSetOf(r.getString(R.string.color_blue), r.getString(R.string.color_yellow), r.getString(R.string.orientation_horizontal)), R.drawable.ukraina)
-            val wegry = Panstwo(getString(R.string.country_wegry), mutableSetOf(r.getString(R.string.color_red), r.getString(R.string.color_white), r.getString(R.string.color_green), r.getString(R.string.orientation_horizontal)), R.drawable.wegry)
-            val wielkabrytania = Panstwo(getString(R.string.country_wielkabrytania), mutableSetOf(r.getString(R.string.color_red), r.getString(R.string.color_white), r.getString(R.string.color_blue), r.getString(R.string.orientation_horizontal)), R.drawable.wielkabrytania)
-            val wlochy = Panstwo(getString(R.string.country_wlochy), mutableSetOf(r.getString(R.string.color_red), r.getString(R.string.color_white), r.getString(R.string.color_green), r.getString(R.string.orientation_vertical)), R.drawable.wlochy)
+            val r = resources
+            val albania = Panstwo(getString(R.string.country_albania), mutableSetOf(r.getString(R.string.continent_europe)), mutableSetOf(r.getString(R.string.color_red), r.getString(R.string.color_black), r.getString(R.string.shape_other)), R.drawable.albania)
+            val andora = Panstwo(getString(R.string.country_andora), mutableSetOf(r.getString(R.string.continent_europe)), mutableSetOf(r.getString(R.string.color_blue), r.getString(R.string.color_yellow), r.getString(R.string.orientation_vertical)), R.drawable.andora)
+            val austria = Panstwo(getString(R.string.country_austria), mutableSetOf(r.getString(R.string.continent_europe)), mutableSetOf(r.getString(R.string.color_red), r.getString(R.string.color_white), r.getString(R.string.orientation_horizontal)), R.drawable.austria)
+            val belgia = Panstwo(getString(R.string.country_belgia), mutableSetOf(r.getString(R.string.continent_europe)), mutableSetOf(r.getString(R.string.color_black), r.getString(R.string.color_yellow), r.getString(R.string.color_red), r.getString(R.string.orientation_vertical)), R.drawable.belgia)
+            val bialorus = Panstwo(getString(R.string.country_bialorus), mutableSetOf(r.getString(R.string.continent_europe)), mutableSetOf(r.getString(R.string.color_red), r.getString(R.string.color_green), r.getString(R.string.orientation_horizontal)), R.drawable.bialorus)
+            val bosnia = Panstwo(getString(R.string.country_bosnia), mutableSetOf(r.getString(R.string.continent_europe)), mutableSetOf(r.getString(R.string.color_blue), r.getString(R.string.color_yellow), r.getString(R.string.color_white), r.getString(R.string.shape_other)), R.drawable.bosnia)
+            val bulgaria = Panstwo(getString(R.string.country_bulgaria), mutableSetOf(r.getString(R.string.continent_europe)), mutableSetOf(r.getString(R.string.color_white), r.getString(R.string.color_green), r.getString(R.string.color_red), r.getString(R.string.orientation_horizontal)), R.drawable.bulgaria)
+            val chorwacja = Panstwo(getString(R.string.country_chorwacja), mutableSetOf(r.getString(R.string.continent_europe)), mutableSetOf(r.getString(R.string.color_red), r.getString(R.string.color_white), r.getString(R.string.color_blue), r.getString(R.string.orientation_horizontal)), R.drawable.chorwacja)
+            val cypr = Panstwo(getString(R.string.country_cypr), mutableSetOf(r.getString(R.string.continent_europe)), mutableSetOf(r.getString(R.string.color_white), r.getString(R.string.color_yellow), r.getString(R.string.shape_other)), R.drawable.cypr)
+            val czarnogora = Panstwo(getString(R.string.country_czarnogora), mutableSetOf(r.getString(R.string.continent_europe)), mutableSetOf(r.getString(R.string.color_red), r.getString(R.string.color_yellow), r.getString(R.string.shape_other)), R.drawable.czarnogora)
+            val czechy = Panstwo(getString(R.string.country_czechy), mutableSetOf(r.getString(R.string.continent_europe)), mutableSetOf(r.getString(R.string.color_white), r.getString(R.string.color_red), r.getString(R.string.shape_other)), R.drawable.czechy)
+            val dania = Panstwo(getString(R.string.country_dania), mutableSetOf(r.getString(R.string.continent_europe)), mutableSetOf(r.getString(R.string.color_red), r.getString(R.string.color_white), r.getString(R.string.shape_cross)), R.drawable.dania)
+            val estonia = Panstwo(getString(R.string.country_estonia), mutableSetOf(r.getString(R.string.continent_europe)), mutableSetOf(r.getString(R.string.color_blue), r.getString(R.string.color_black), r.getString(R.string.color_white), r.getString(R.string.orientation_horizontal)), R.drawable.estonia)
+            val finlandia = Panstwo(getString(R.string.country_finlandia), mutableSetOf(r.getString(R.string.continent_europe)), mutableSetOf(r.getString(R.string.color_blue), r.getString(R.string.color_white), r.getString(R.string.shape_cross)), R.drawable.finlandia)
+            val francja = Panstwo(getString(R.string.country_francja), mutableSetOf(r.getString(R.string.continent_europe)), mutableSetOf(r.getString(R.string.color_blue), r.getString(R.string.color_white), r.getString(R.string.color_red), r.getString(R.string.orientation_vertical)), R.drawable.francja)
+            val gibraltar = Panstwo(getString(R.string.country_gibraltar), mutableSetOf(r.getString(R.string.continent_europe)), mutableSetOf(r.getString(R.string.color_white), r.getString(R.string.color_red), r.getString(R.string.shape_other)), R.drawable.giblartar)
+            val grecja = Panstwo(getString(R.string.country_grecja), mutableSetOf(r.getString(R.string.continent_europe)), mutableSetOf(r.getString(R.string.color_blue), r.getString(R.string.color_white), r.getString(R.string.shape_other)), R.drawable.grecja)
+            val hiszpania = Panstwo(getString(R.string.country_hiszpania), mutableSetOf(r.getString(R.string.continent_europe)), mutableSetOf(r.getString(R.string.color_red), r.getString(R.string.color_yellow), r.getString(R.string.orientation_horizontal)), R.drawable.hiszpania)
+            val holandia = Panstwo(getString(R.string.country_holandia), mutableSetOf(r.getString(R.string.continent_europe)), mutableSetOf(r.getString(R.string.color_red), r.getString(R.string.color_white), r.getString(R.string.color_blue), r.getString(R.string.orientation_horizontal)), R.drawable.holandia)
+            val irlandia = Panstwo(getString(R.string.country_irlandia), mutableSetOf(r.getString(R.string.continent_europe)), mutableSetOf(r.getString(R.string.color_green), r.getString(R.string.color_white), r.getString(R.string.color_orange), r.getString(R.string.orientation_vertical)), R.drawable.irlandia)
+            val islandia = Panstwo(getString(R.string.country_islandia), mutableSetOf(r.getString(R.string.continent_europe)), mutableSetOf(r.getString(R.string.color_blue), r.getString(R.string.color_red), r.getString(R.string.color_white), r.getString(R.string.shape_cross)), R.drawable.islandia)
+            val liechtenstein = Panstwo(getString(R.string.country_liechtenstein), mutableSetOf(r.getString(R.string.continent_europe)), mutableSetOf(r.getString(R.string.color_blue), r.getString(R.string.color_red), r.getString(R.string.orientation_horizontal)), R.drawable.liechtenstein)
+            val litwa = Panstwo(getString(R.string.country_litwa), mutableSetOf(r.getString(R.string.continent_europe)), mutableSetOf(r.getString(R.string.color_yellow), r.getString(R.string.color_green), r.getString(R.string.color_red), r.getString(R.string.orientation_horizontal)), R.drawable.litwa)
+            val luksemburg = Panstwo(getString(R.string.country_luksemburg), mutableSetOf(r.getString(R.string.continent_europe)), mutableSetOf(r.getString(R.string.color_red), r.getString(R.string.color_white), r.getString(R.string.color_blue), r.getString(R.string.orientation_horizontal)), R.drawable.luksemburg)
+            val lotwa = Panstwo(getString(R.string.country_lotwa), mutableSetOf(r.getString(R.string.continent_europe)), mutableSetOf(r.getString(R.string.color_red), r.getString(R.string.color_white), r.getString(R.string.orientation_horizontal)), R.drawable.lotwa)
+            val malta = Panstwo(getString(R.string.country_malta), mutableSetOf(r.getString(R.string.continent_europe)), mutableSetOf(r.getString(R.string.color_red), r.getString(R.string.color_white), r.getString(R.string.orientation_vertical)), R.drawable.malta)
+            val macedonia = Panstwo(getString(R.string.country_macedonia), mutableSetOf(r.getString(R.string.continent_europe)), mutableSetOf(r.getString(R.string.color_red), r.getString(R.string.color_yellow), r.getString(R.string.shape_other)), R.drawable.macedonia)
+            val monako = Panstwo(getString(R.string.country_monako), mutableSetOf(r.getString(R.string.continent_europe)), mutableSetOf(r.getString(R.string.color_red), r.getString(R.string.color_white), r.getString(R.string.orientation_horizontal)), R.drawable.monako)
+            val niemcy = Panstwo(getString(R.string.country_niemcy), mutableSetOf(r.getString(R.string.continent_europe)), mutableSetOf(r.getString(R.string.color_black), r.getString(R.string.color_red), r.getString(R.string.color_yellow), r.getString(R.string.orientation_horizontal)), R.drawable.niemcy)
+            val norwegia = Panstwo(getString(R.string.country_norwegia), mutableSetOf(r.getString(R.string.continent_europe)), mutableSetOf(r.getString(R.string.color_red), r.getString(R.string.color_white), r.getString(R.string.color_blue), r.getString(R.string.shape_cross)), R.drawable.norwegia)
+            val portugalia = Panstwo(getString(R.string.country_portugalia), mutableSetOf(r.getString(R.string.continent_europe)), mutableSetOf(r.getString(R.string.color_green), r.getString(R.string.color_red), r.getString(R.string.orientation_vertical)), R.drawable.portugalia)
+            val polska = Panstwo(getString(R.string.country_polska),mutableSetOf(r.getString(R.string.continent_europe)), mutableSetOf(r.getString(R.string.color_white), r.getString(R.string.color_red), r.getString(R.string.orientation_horizontal)), R.drawable.polska)
+            val rosja = Panstwo(getString(R.string.country_rosja), mutableSetOf(r.getString(R.string.continent_europe)), mutableSetOf(r.getString(R.string.color_white), r.getString(R.string.color_blue), r.getString(R.string.color_red), r.getString(R.string.orientation_horizontal)), R.drawable.rosja)
+            val rumunia = Panstwo(getString(R.string.country_rumunia), mutableSetOf(r.getString(R.string.continent_europe)), mutableSetOf(r.getString(R.string.color_blue), r.getString(R.string.color_yellow), r.getString(R.string.color_red), r.getString(R.string.orientation_vertical)), R.drawable.rumunia)
+            val sanmarino = Panstwo(getString(R.string.country_sanmarino), mutableSetOf(r.getString(R.string.continent_europe)), mutableSetOf(r.getString(R.string.color_white), r.getString(R.string.color_blue), r.getString(R.string.orientation_vertical)), R.drawable.sanmarino)
+            val serbia = Panstwo(getString(R.string.country_serbia), mutableSetOf(r.getString(R.string.continent_europe)), mutableSetOf(r.getString(R.string.color_red), r.getString(R.string.color_blue), r.getString(R.string.color_white), r.getString(R.string.orientation_horizontal)), R.drawable.serbia)
+            val slowacja = Panstwo(getString(R.string.country_slowacja), mutableSetOf(r.getString(R.string.continent_europe)), mutableSetOf(r.getString(R.string.color_white), r.getString(R.string.color_blue), r.getString(R.string.color_red), r.getString(R.string.orientation_horizontal)), R.drawable.slowacja)
+            val slowenia = Panstwo(getString(R.string.country_slowenia), mutableSetOf(r.getString(R.string.continent_europe)), mutableSetOf(r.getString(R.string.color_white), r.getString(R.string.color_blue), r.getString(R.string.color_red), r.getString(R.string.orientation_horizontal)), R.drawable.slowenia)
+            val szkocja = Panstwo(getString(R.string.country_szkocja), mutableSetOf(r.getString(R.string.continent_europe)), mutableSetOf(r.getString(R.string.color_blue), r.getString(R.string.color_white), r.getString(R.string.shape_cross)), R.drawable.szkocja)
+            val szwajcaria = Panstwo(getString(R.string.country_szwajcaria), mutableSetOf(r.getString(R.string.continent_europe)), mutableSetOf(r.getString(R.string.color_red), r.getString(R.string.color_white), r.getString(R.string.shape_cross)), R.drawable.szwajcaria)
+            val szwecja = Panstwo(getString(R.string.country_szwecja), mutableSetOf(r.getString(R.string.continent_europe)), mutableSetOf(r.getString(R.string.color_blue), r.getString(R.string.color_yellow), r.getString(R.string.shape_cross)), R.drawable.szwecja)
+            val turcja = Panstwo(getString(R.string.country_turcja), mutableSetOf(r.getString(R.string.continent_europe)), mutableSetOf(r.getString(R.string.color_red), r.getString(R.string.color_white), r.getString(R.string.shape_other)), R.drawable.turcja)
+            val ukraina = Panstwo(getString(R.string.country_ukraina), mutableSetOf(r.getString(R.string.continent_europe)), mutableSetOf(r.getString(R.string.color_blue), r.getString(R.string.color_yellow), r.getString(R.string.orientation_horizontal)), R.drawable.ukraina)
+            val wegry = Panstwo(getString(R.string.country_wegry), mutableSetOf(r.getString(R.string.continent_europe)), mutableSetOf(r.getString(R.string.color_red), r.getString(R.string.color_white), r.getString(R.string.color_green), r.getString(R.string.orientation_horizontal)), R.drawable.wegry)
+            val wielkabrytania = Panstwo(getString(R.string.country_wielkabrytania), mutableSetOf(r.getString(R.string.continent_europe)), mutableSetOf(r.getString(R.string.color_red), r.getString(R.string.color_white), r.getString(R.string.color_blue), r.getString(R.string.orientation_horizontal)), R.drawable.wielkabrytania)
+            val wlochy = Panstwo(getString(R.string.country_wlochy), mutableSetOf(r.getString(R.string.continent_europe)), mutableSetOf(r.getString(R.string.color_red), r.getString(R.string.color_white), r.getString(R.string.color_green), r.getString(R.string.orientation_vertical)), R.drawable.wlochy)
 
-            val argentina = Panstwo(getString(R.string.country_argentina), mutableSetOf(r.getString(R.string.color_blue), r.getString(R.string.color_white), r.getString(R.string.orientation_horizontal)), R.drawable.argentyna)
-            val bahamy = Panstwo(getString(R.string.country_bahamy), mutableSetOf(r.getString(R.string.color_blue), r.getString(R.string.color_yellow), r.getString(R.string.color_black), r.getString(R.string.orientation_horizontal), r.getString(R.string.shape_other)), R.drawable.bahamy)
-            val barbados = Panstwo(getString(R.string.country_barbados), mutableSetOf(r.getString(R.string.color_blue), r.getString(R.string.color_yellow), r.getString(R.string.color_black), r.getString(R.string.orientation_vertical)), R.drawable.barbados)
-            val belize = Panstwo(getString(R.string.country_belize), mutableSetOf(r.getString(R.string.color_red), r.getString(R.string.color_blue), r.getString(R.string.orientation_horizontal), r.getString(R.string.shape_other)), R.drawable.belize)
-            val boliwia = Panstwo(getString(R.string.country_boliwia), mutableSetOf(r.getString(R.string.color_red), r.getString(R.string.color_yellow), r.getString(R.string.color_green), r.getString(R.string.orientation_horizontal)), R.drawable.boliwia)
-            val brazylia = Panstwo(getString(R.string.country_brazylia), mutableSetOf(r.getString(R.string.color_green), r.getString(R.string.color_yellow), r.getString(R.string.shape_other)), R.drawable.brazylia)
-            val chile = Panstwo(getString(R.string.country_chile), mutableSetOf(r.getString(R.string.color_red), r.getString(R.string.color_white), r.getString(R.string.color_blue), r.getString(R.string.orientation_horizontal), r.getString(R.string.shape_other)), R.drawable.chile)
-            val ekwador = Panstwo(getString(R.string.country_ekwador), mutableSetOf(r.getString(R.string.color_yellow), r.getString(R.string.color_blue), r.getString(R.string.color_red), r.getString(R.string.orientation_horizontal)), R.drawable.ekwador)
-            val gujana = Panstwo(getString(R.string.country_gujana), mutableSetOf(r.getString(R.string.color_green), r.getString(R.string.color_yellow), r.getString(R.string.color_black), r.getString(R.string.shape_other)), R.drawable.gujana)
-            val jamajka = Panstwo(getString(R.string.country_jamajka), mutableSetOf(r.getString(R.string.color_green), r.getString(R.string.color_yellow), r.getString(R.string.color_black), r.getString(R.string.shape_cross)), R.drawable.jamajka)
-            val kanada = Panstwo(getString(R.string.country_kanada), mutableSetOf(r.getString(R.string.color_red), r.getString(R.string.color_white), r.getString(R.string.orientation_vertical)), R.drawable.kanada)
-            val kolumbia = Panstwo(getString(R.string.country_kolumbia), mutableSetOf(r.getString(R.string.color_yellow), r.getString(R.string.color_blue), r.getString(R.string.color_red), r.getString(R.string.orientation_horizontal)), R.drawable.kolumbia)
-            val kostaryka = Panstwo(getString(R.string.country_kostaryka), mutableSetOf(r.getString(R.string.color_blue), r.getString(R.string.color_white), r.getString(R.string.color_red), r.getString(R.string.orientation_horizontal)), R.drawable.kostaryka)
-            val kuba = Panstwo(getString(R.string.country_kuba), mutableSetOf(r.getString(R.string.color_red), r.getString(R.string.color_blue), r.getString(R.string.color_white), r.getString(R.string.orientation_horizontal), r.getString(R.string.shape_other)), R.drawable.kuba)
-            val meksyk = Panstwo(getString(R.string.country_meksyk), mutableSetOf(r.getString(R.string.color_green), r.getString(R.string.color_white), r.getString(R.string.color_red), r.getString(R.string.orientation_vertical)), R.drawable.meksyk)
-            val panama = Panstwo(getString(R.string.country_panama), mutableSetOf(r.getString(R.string.color_red), r.getString(R.string.color_white), r.getString(R.string.color_blue), r.getString(R.string.shape_other)), R.drawable.panama)
-            val paragwaj = Panstwo(getString(R.string.country_paragwaj), mutableSetOf(r.getString(R.string.color_red), r.getString(R.string.color_white), r.getString(R.string.color_blue), r.getString(R.string.orientation_horizontal)), R.drawable.paragwaj)
-            val peru = Panstwo(getString(R.string.country_peru), mutableSetOf(r.getString(R.string.color_red), r.getString(R.string.color_white), r.getString(R.string.orientation_vertical)), R.drawable.peru)
-            val stanyzjednoczone = Panstwo(getString(R.string.country_stanyzjednoczone), mutableSetOf(r.getString(R.string.color_red), r.getString(R.string.color_white), r.getString(R.string.color_blue), r.getString(R.string.orientation_horizontal), r.getString(R.string.shape_other)), R.drawable.stanyzjednoczone)
-            val surinam = Panstwo(getString(R.string.country_surinam), mutableSetOf(r.getString(R.string.color_green), r.getString(R.string.color_yellow), r.getString(R.string.color_red), r.getString(R.string.orientation_horizontal)), R.drawable.surinam)
-            val urugwaj = Panstwo(getString(R.string.country_urugwaj), mutableSetOf(r.getString(R.string.color_white), r.getString(R.string.color_blue), r.getString(R.string.orientation_horizontal), r.getString(R.string.shape_other)), R.drawable.urugwaj)
-            val wenezuela = Panstwo(getString(R.string.country_wenezuela), mutableSetOf(r.getString(R.string.color_yellow), r.getString(R.string.color_blue), r.getString(R.string.color_red), r.getString(R.string.orientation_horizontal)), R.drawable.wenezuela)
-            val antiguabarbuda = Panstwo(getString(R.string.country_antiguabarbuda), mutableSetOf(r.getString(R.string.color_red), r.getString(R.string.color_blue), r.getString(R.string.shape_other)), R.drawable.antiguabarbuda)
-            val dominika = Panstwo(getString(R.string.country_dominika), mutableSetOf(r.getString(R.string.color_green), r.getString(R.string.color_yellow), r.getString(R.string.shape_cross)), R.drawable.dominika)
-            val dominikana = Panstwo(getString(R.string.country_dominikana), mutableSetOf(r.getString(R.string.color_red), r.getString(R.string.color_white), r.getString(R.string.color_blue), r.getString(R.string.shape_cross)), R.drawable.dominikana)
-            val grenada = Panstwo(getString(R.string.country_grenada), mutableSetOf(r.getString(R.string.color_red), r.getString(R.string.color_yellow), r.getString(R.string.color_green), r.getString(R.string.shape_other)), R.drawable.grenada)
-            val gwatemala = Panstwo(getString(R.string.country_gwatemala), mutableSetOf(r.getString(R.string.color_blue), r.getString(R.string.color_white), r.getString(R.string.color_blue), r.getString(R.string.orientation_vertical)), R.drawable.gwatemala)
-            val haiti = Panstwo(getString(R.string.country_haiti), mutableSetOf(r.getString(R.string.color_blue), r.getString(R.string.color_red), r.getString(R.string.orientation_horizontal)), R.drawable.haiti)
-            val honduras = Panstwo(getString(R.string.country_honduras), mutableSetOf(r.getString(R.string.color_blue), r.getString(R.string.color_white), r.getString(R.string.orientation_horizontal)), R.drawable.honduras)
-            val nikaragua = Panstwo(getString(R.string.country_nikaragua), mutableSetOf(r.getString(R.string.color_blue), r.getString(R.string.color_white), r.getString(R.string.orientation_horizontal)), R.drawable.nikaragua)
-            val stkittsnevis = Panstwo(getString(R.string.country_stkittsnevis), mutableSetOf(r.getString(R.string.color_green), r.getString(R.string.color_yellow), r.getString(R.string.color_black), r.getString(R.string.shape_other)), R.drawable.stkittsnevis)
-            val stlucia = Panstwo(getString(R.string.country_stlucia), mutableSetOf(r.getString(R.string.color_blue), r.getString(R.string.color_yellow), r.getString(R.string.color_black), r.getString(R.string.shape_other)), R.drawable.stlucia)
-            val stvimcentgrenadyny = Panstwo(getString(R.string.country_stvimcentgrenadyny), mutableSetOf(r.getString(R.string.color_blue), r.getString(R.string.color_green), r.getString(R.string.color_yellow), r.getString(R.string.orientation_vertical)), R.drawable.stvimcentgrenadyny)
-            val salwador = Panstwo(getString(R.string.country_salwador), mutableSetOf(r.getString(R.string.color_blue), r.getString(R.string.color_white), r.getString(R.string.color_blue), r.getString(R.string.orientation_horizontal)), R.drawable.salwador)
+            val argentina = Panstwo(getString(R.string.country_argentina), mutableSetOf(r.getString(R.string.continent_america)), mutableSetOf(r.getString(R.string.color_blue), r.getString(R.string.color_white), r.getString(R.string.orientation_horizontal)), R.drawable.argentyna)
+            val bahamy = Panstwo(getString(R.string.country_bahamy), mutableSetOf(r.getString(R.string.continent_america)), mutableSetOf(r.getString(R.string.color_blue), r.getString(R.string.color_yellow), r.getString(R.string.color_black), r.getString(R.string.orientation_horizontal), r.getString(R.string.shape_other)), R.drawable.bahamy)
+            val barbados = Panstwo(getString(R.string.country_barbados), mutableSetOf(r.getString(R.string.continent_america)), mutableSetOf(r.getString(R.string.color_blue), r.getString(R.string.color_yellow), r.getString(R.string.color_black), r.getString(R.string.orientation_vertical)), R.drawable.barbados)
+            val belize = Panstwo(getString(R.string.country_belize), mutableSetOf(r.getString(R.string.continent_america)), mutableSetOf(r.getString(R.string.color_red), r.getString(R.string.color_blue), r.getString(R.string.orientation_horizontal), r.getString(R.string.shape_other)), R.drawable.belize)
+            val boliwia = Panstwo(getString(R.string.country_boliwia), mutableSetOf(r.getString(R.string.continent_america)), mutableSetOf(r.getString(R.string.color_red), r.getString(R.string.color_yellow), r.getString(R.string.color_green), r.getString(R.string.orientation_horizontal)), R.drawable.boliwia)
+            val brazylia = Panstwo(getString(R.string.country_brazylia), mutableSetOf(r.getString(R.string.continent_america)), mutableSetOf(r.getString(R.string.color_green), r.getString(R.string.color_yellow), r.getString(R.string.shape_other)), R.drawable.brazylia)
+            val chile = Panstwo(getString(R.string.country_chile), mutableSetOf(r.getString(R.string.continent_america)), mutableSetOf(r.getString(R.string.color_red), r.getString(R.string.color_white), r.getString(R.string.color_blue), r.getString(R.string.orientation_horizontal), r.getString(R.string.shape_other)), R.drawable.chile)
+            val ekwador = Panstwo(getString(R.string.country_ekwador), mutableSetOf(r.getString(R.string.continent_america)), mutableSetOf(r.getString(R.string.color_yellow), r.getString(R.string.color_blue), r.getString(R.string.color_red), r.getString(R.string.orientation_horizontal)), R.drawable.ekwador)
+            val gujana = Panstwo(getString(R.string.country_gujana), mutableSetOf(r.getString(R.string.continent_america)), mutableSetOf(r.getString(R.string.color_green), r.getString(R.string.color_yellow), r.getString(R.string.color_black), r.getString(R.string.shape_other)), R.drawable.gujana)
+            val jamajka = Panstwo(getString(R.string.country_jamajka), mutableSetOf(r.getString(R.string.continent_america)), mutableSetOf(r.getString(R.string.color_green), r.getString(R.string.color_yellow), r.getString(R.string.color_black), r.getString(R.string.shape_cross)), R.drawable.jamajka)
+            val kanada = Panstwo(getString(R.string.country_kanada), mutableSetOf(r.getString(R.string.continent_america)), mutableSetOf(r.getString(R.string.color_red), r.getString(R.string.color_white), r.getString(R.string.orientation_vertical)), R.drawable.kanada)
+            val kolumbia = Panstwo(getString(R.string.country_kolumbia), mutableSetOf(r.getString(R.string.continent_america)), mutableSetOf(r.getString(R.string.color_yellow), r.getString(R.string.color_blue), r.getString(R.string.color_red), r.getString(R.string.orientation_horizontal)), R.drawable.kolumbia)
+            val kostaryka = Panstwo(getString(R.string.country_kostaryka), mutableSetOf(r.getString(R.string.continent_america)), mutableSetOf(r.getString(R.string.color_blue), r.getString(R.string.color_white), r.getString(R.string.color_red), r.getString(R.string.orientation_horizontal)), R.drawable.kostaryka)
+            val kuba = Panstwo(getString(R.string.country_kuba), mutableSetOf(r.getString(R.string.continent_america)), mutableSetOf(r.getString(R.string.color_red), r.getString(R.string.color_blue), r.getString(R.string.color_white), r.getString(R.string.orientation_horizontal), r.getString(R.string.shape_other)), R.drawable.kuba)
+            val meksyk = Panstwo(getString(R.string.country_meksyk), mutableSetOf(r.getString(R.string.continent_america)), mutableSetOf(r.getString(R.string.color_green), r.getString(R.string.color_white), r.getString(R.string.color_red), r.getString(R.string.orientation_vertical)), R.drawable.meksyk)
+            val panama = Panstwo(getString(R.string.country_panama), mutableSetOf(r.getString(R.string.continent_america)), mutableSetOf(r.getString(R.string.color_red), r.getString(R.string.color_white), r.getString(R.string.color_blue), r.getString(R.string.shape_other)), R.drawable.panama)
+            val paragwaj = Panstwo(getString(R.string.country_paragwaj), mutableSetOf(r.getString(R.string.continent_america)), mutableSetOf(r.getString(R.string.color_red), r.getString(R.string.color_white), r.getString(R.string.color_blue), r.getString(R.string.orientation_horizontal)), R.drawable.paragwaj)
+            val peru = Panstwo(getString(R.string.country_peru), mutableSetOf(r.getString(R.string.continent_america)), mutableSetOf(r.getString(R.string.color_red), r.getString(R.string.color_white), r.getString(R.string.orientation_vertical)), R.drawable.peru)
+            val stanyzjednoczone = Panstwo(getString(R.string.country_stanyzjednoczone), mutableSetOf(r.getString(R.string.continent_america)), mutableSetOf(r.getString(R.string.color_red), r.getString(R.string.color_white), r.getString(R.string.color_blue), r.getString(R.string.orientation_horizontal), r.getString(R.string.shape_other)), R.drawable.stanyzjednoczone)
+            val surinam = Panstwo(getString(R.string.country_surinam), mutableSetOf(r.getString(R.string.continent_america)), mutableSetOf(r.getString(R.string.color_green), r.getString(R.string.color_yellow), r.getString(R.string.color_red), r.getString(R.string.orientation_horizontal)), R.drawable.surinam)
+            val urugwaj = Panstwo(getString(R.string.country_urugwaj), mutableSetOf(r.getString(R.string.continent_america)), mutableSetOf(r.getString(R.string.color_white), r.getString(R.string.color_blue), r.getString(R.string.orientation_horizontal), r.getString(R.string.shape_other)), R.drawable.urugwaj)
+            val wenezuela = Panstwo(getString(R.string.country_wenezuela), mutableSetOf(r.getString(R.string.continent_america)), mutableSetOf(r.getString(R.string.color_yellow), r.getString(R.string.color_blue), r.getString(R.string.color_red), r.getString(R.string.orientation_horizontal)), R.drawable.wenezuela)
+            val antiguabarbuda = Panstwo(getString(R.string.country_antiguabarbuda), mutableSetOf(r.getString(R.string.continent_america)), mutableSetOf(r.getString(R.string.color_red), r.getString(R.string.color_blue), r.getString(R.string.shape_other)), R.drawable.antiguabarbuda)
+            val dominika = Panstwo(getString(R.string.country_dominika), mutableSetOf(r.getString(R.string.continent_america)), mutableSetOf(r.getString(R.string.color_green), r.getString(R.string.color_yellow), r.getString(R.string.shape_cross)), R.drawable.dominika)
+            val dominikana = Panstwo(getString(R.string.country_dominikana), mutableSetOf(r.getString(R.string.continent_america)), mutableSetOf(r.getString(R.string.color_red), r.getString(R.string.color_white), r.getString(R.string.color_blue), r.getString(R.string.shape_cross)), R.drawable.dominikana)
+            val grenada = Panstwo(getString(R.string.country_grenada), mutableSetOf(r.getString(R.string.continent_america)), mutableSetOf(r.getString(R.string.color_red), r.getString(R.string.color_yellow), r.getString(R.string.color_green), r.getString(R.string.shape_other)), R.drawable.grenada)
+            val gwatemala = Panstwo(getString(R.string.country_gwatemala), mutableSetOf(r.getString(R.string.continent_america)), mutableSetOf(r.getString(R.string.color_blue), r.getString(R.string.color_white), r.getString(R.string.color_blue), r.getString(R.string.orientation_vertical)), R.drawable.gwatemala)
+            val haiti = Panstwo(getString(R.string.country_haiti), mutableSetOf(r.getString(R.string.continent_america)), mutableSetOf(r.getString(R.string.color_blue), r.getString(R.string.color_red), r.getString(R.string.orientation_horizontal)), R.drawable.haiti)
+            val honduras = Panstwo(getString(R.string.country_honduras), mutableSetOf(r.getString(R.string.continent_america)), mutableSetOf(r.getString(R.string.color_blue), r.getString(R.string.color_white), r.getString(R.string.orientation_horizontal)), R.drawable.honduras)
+            val nikaragua = Panstwo(getString(R.string.country_nikaragua), mutableSetOf(r.getString(R.string.continent_america)), mutableSetOf(r.getString(R.string.color_blue), r.getString(R.string.color_white), r.getString(R.string.orientation_horizontal)), R.drawable.nikaragua)
+            val stkittsnevis = Panstwo(getString(R.string.country_stkittsnevis), mutableSetOf(r.getString(R.string.continent_america)), mutableSetOf(r.getString(R.string.color_green), r.getString(R.string.color_yellow), r.getString(R.string.color_black), r.getString(R.string.shape_other)), R.drawable.stkittsnevis)
+            val stlucia = Panstwo(getString(R.string.country_stlucia), mutableSetOf(r.getString(R.string.continent_america)), mutableSetOf(r.getString(R.string.color_blue), r.getString(R.string.color_yellow), r.getString(R.string.color_black), r.getString(R.string.shape_other)), R.drawable.stlucia)
+            val stvimcentgrenadyny = Panstwo(getString(R.string.country_stvimcentgrenadyny), mutableSetOf(r.getString(R.string.continent_america)), mutableSetOf(r.getString(R.string.color_blue), r.getString(R.string.color_green), r.getString(R.string.color_yellow), r.getString(R.string.orientation_vertical)), R.drawable.stvimcentgrenadyny)
+            val salwador = Panstwo(getString(R.string.country_salwador), mutableSetOf(r.getString(R.string.continent_america)), mutableSetOf(r.getString(R.string.color_blue), r.getString(R.string.color_white), r.getString(R.string.color_blue), r.getString(R.string.orientation_horizontal)), R.drawable.salwador)
 
-            val afganistan = Panstwo(getString(R.string.country_afghanistan), mutableSetOf(r.getString(R.string.color_black), r.getString(R.string.color_white)), R.drawable.afganistan)
-            val arabiasaudyjska = Panstwo(getString(R.string.country_arabiasaudyjska), mutableSetOf(r.getString(R.string.color_green), r.getString(R.string.color_white)), R.drawable.arabiasaudyjska)
-            val armenia = Panstwo(getString(R.string.country_armenia), mutableSetOf(r.getString(R.string.color_red), r.getString(R.string.color_blue), r.getString(R.string.color_orange)), R.drawable.armenia)
-            val azerbejdzan = Panstwo(getString(R.string.country_azerbejdzan), mutableSetOf(r.getString(R.string.color_blue), r.getString(R.string.color_red), r.getString(R.string.color_green)), R.drawable.azerbejdzan)
-            val bahrajn = Panstwo(getString(R.string.country_bahrajn), mutableSetOf(r.getString(R.string.color_red), r.getString(R.string.color_white)), R.drawable.bahrajn)
-            val bangladesz = Panstwo(getString(R.string.country_bangladesz), mutableSetOf(r.getString(R.string.color_green), r.getString(R.string.color_red)), R.drawable.bangladesz)
-            val birma = Panstwo(getString(R.string.country_birma), mutableSetOf(r.getString(R.string.color_red), r.getString(R.string.color_blue), r.getString(R.string.color_white)), R.drawable.birma)
-            val bhutan = Panstwo(getString(R.string.country_bhutan), mutableSetOf(r.getString(R.string.color_orange), r.getString(R.string.color_yellow)), R.drawable.bhutan)
-            val chinskarepublikaludowa = Panstwo(getString(R.string.country_chinskarepublikaludowa), mutableSetOf(r.getString(R.string.color_red), r.getString(R.string.color_yellow)), R.drawable.chinskarepublikaludowa)
-            val indie = Panstwo(getString(R.string.country_indie), mutableSetOf(r.getString(R.string.color_orange), r.getString(R.string.color_white), r.getString(R.string.color_green)), R.drawable.indie)
-            val indonezja = Panstwo(getString(R.string.country_indonezja), mutableSetOf(r.getString(R.string.color_red), r.getString(R.string.color_white)), R.drawable.indonezja)
-            val irak = Panstwo(getString(R.string.country_irak), mutableSetOf(r.getString(R.string.color_red), r.getString(R.string.color_white), r.getString(R.string.color_black)), R.drawable.irak)
-            val iran = Panstwo(getString(R.string.country_iran), mutableSetOf(r.getString(R.string.color_green), r.getString(R.string.color_white), r.getString(R.string.color_red)), R.drawable.iran)
-            val izrael = Panstwo(getString(R.string.country_izrael), mutableSetOf(r.getString(R.string.color_blue), r.getString(R.string.color_white)), R.drawable.izrael)
-            val japonia = Panstwo(getString(R.string.country_japonia), mutableSetOf(r.getString(R.string.color_red), r.getString(R.string.color_white)), R.drawable.japonia)
-            val jemen = Panstwo(getString(R.string.country_jemen), mutableSetOf(r.getString(R.string.color_red), r.getString(R.string.color_white), r.getString(R.string.color_black)), R.drawable.jemen)
-            val jordania = Panstwo(getString(R.string.country_jordania), mutableSetOf(r.getString(R.string.color_black), r.getString(R.string.color_white), r.getString(R.string.color_green), r.getString(R.string.color_red)), R.drawable.jordania)
-            val kazachstan = Panstwo(getString(R.string.country_kazachstan), mutableSetOf(r.getString(R.string.color_blue), r.getString(R.string.color_yellow)), R.drawable.kazachstan)
-            val kirgistan = Panstwo(getString(R.string.country_kirgistan), mutableSetOf(r.getString(R.string.color_red), r.getString(R.string.color_yellow), r.getString(R.string.color_blue)), R.drawable.kirgistan)
-            val koreapolnocna = Panstwo(getString(R.string.country_koreapolnocna), mutableSetOf(r.getString(R.string.color_red), r.getString(R.string.color_white), r.getString(R.string.color_blue)), R.drawable.koreapolnocna)
-            val koreapoludniowa = Panstwo(getString(R.string.country_koreapoludniowa), mutableSetOf(r.getString(R.string.color_red), r.getString(R.string.color_white), r.getString(R.string.color_blue)), R.drawable.koreapoludniowa)
-            val kuwejt = Panstwo(getString(R.string.country_kuwejt), mutableSetOf(r.getString(R.string.color_green), r.getString(R.string.color_white), r.getString(R.string.color_red)), R.drawable.kuwejt)
-            val laos = Panstwo(getString(R.string.country_laos), mutableSetOf(r.getString(R.string.color_blue), r.getString(R.string.color_red)), R.drawable.laos)
-            val liban = Panstwo(getString(R.string.country_liban), mutableSetOf(r.getString(R.string.color_red), r.getString(R.string.color_white)), R.drawable.liban)
-            val malezja = Panstwo(getString(R.string.country_malezja), mutableSetOf(r.getString(R.string.color_red), r.getString(R.string.color_white), r.getString(R.string.color_blue)), R.drawable.malezja)
-            val maledivy = Panstwo(getString(R.string.country_maledivy), mutableSetOf(r.getString(R.string.color_red), r.getString(R.string.color_white), r.getString(R.string.color_green)), R.drawable.maledivy)
-            val mongolia = Panstwo(getString(R.string.country_mongolia), mutableSetOf(r.getString(R.string.color_red), r.getString(R.string.color_blue)), R.drawable.mongolia)
-            val nepal = Panstwo(getString(R.string.country_nepal), mutableSetOf(r.getString(R.string.color_red), r.getString(R.string.color_white)), R.drawable.nepal)
-            val oman = Panstwo(getString(R.string.country_oman), mutableSetOf(r.getString(R.string.color_red), r.getString(R.string.color_white), r.getString(R.string.color_green)), R.drawable.oman)
-            val pakistan = Panstwo(getString(R.string.country_pakistan), mutableSetOf(r.getString(R.string.color_green), r.getString(R.string.color_white)), R.drawable.pakistan)
-            val filipiny = Panstwo(getString(R.string.country_filipiny), mutableSetOf(r.getString(R.string.color_blue), r.getString(R.string.color_red), r.getString(R.string.color_yellow)), R.drawable.filipiny)
-            val katar = Panstwo(getString(R.string.country_katar), mutableSetOf("czerwony", r.getString(R.string.color_white)), R.drawable.qatar)
-            val singapur = Panstwo(getString(R.string.country_singapur), mutableSetOf(r.getString(R.string.color_red), r.getString(R.string.color_white)), R.drawable.singapur)
-            val srilanka = Panstwo(getString(R.string.country_srilanka), mutableSetOf(r.getString(R.string.color_yellow), r.getString(R.string.color_red), r.getString(R.string.color_green)), R.drawable.srilanka)
-            val syria = Panstwo(getString(R.string.country_syria), mutableSetOf(r.getString(R.string.color_red), r.getString(R.string.color_white), r.getString(R.string.color_black)), R.drawable.syria)
-            val tadzykistan = Panstwo(getString(R.string.country_tadzykistan), mutableSetOf(r.getString(R.string.color_red), r.getString(R.string.color_white), r.getString(R.string.color_green)), R.drawable.tadzykistan)
-            val tajlandia = Panstwo(getString(R.string.country_tajlandia), mutableSetOf(r.getString(R.string.color_red), r.getString(R.string.color_white), r.getString(R.string.color_blue)), R.drawable.tajlandia)
-            val timorwschodni = Panstwo(getString(R.string.country_timorwschodni), mutableSetOf(r.getString(R.string.color_red), r.getString(R.string.color_black), r.getString(R.string.color_yellow)), R.drawable.timorwschodni)
-            val turkmenistan = Panstwo(getString(R.string.country_turkmenistan), mutableSetOf(r.getString(R.string.color_green), r.getString(R.string.color_red)), R.drawable.turkmenistan)
-            val uzbeckistan = Panstwo(getString(R.string.country_uzbeckistan), mutableSetOf(r.getString(R.string.color_blue), r.getString(R.string.color_white), r.getString(R.string.color_green)), R.drawable.uzbekistan)
-            val wietnam = Panstwo(getString(R.string.country_wietnam), mutableSetOf(r.getString(R.string.color_red), r.getString(R.string.color_yellow)), R.drawable.wietnam)
-            val zjednoczoneemiratyarabskie = Panstwo(getString(R.string.country_zjednoczoneemiratyarabskie), mutableSetOf(r.getString(R.string.color_black), r.getString(R.string.color_white), r.getString(R.string.color_green), r.getString(R.string.color_red)), R.drawable.emiratyarabskie)
+            val afganistan = Panstwo(getString(R.string.country_afghanistan), mutableSetOf(r.getString(R.string.continent_asia)), mutableSetOf(r.getString(R.string.color_black), r.getString(R.string.color_white)), R.drawable.afganistan)
+            val arabiasaudyjska = Panstwo(getString(R.string.country_arabiasaudyjska), mutableSetOf(r.getString(R.string.continent_asia)), mutableSetOf(r.getString(R.string.color_green), r.getString(R.string.color_white)), R.drawable.arabiasaudyjska)
+            val armenia = Panstwo(getString(R.string.country_armenia), mutableSetOf(r.getString(R.string.continent_asia)), mutableSetOf(r.getString(R.string.color_red), r.getString(R.string.color_blue), r.getString(R.string.color_orange)), R.drawable.armenia)
+            val azerbejdzan = Panstwo(getString(R.string.country_azerbejdzan), mutableSetOf(r.getString(R.string.continent_asia)), mutableSetOf(r.getString(R.string.color_blue), r.getString(R.string.color_red), r.getString(R.string.color_green)), R.drawable.azerbejdzan)
+            val bahrajn = Panstwo(getString(R.string.country_bahrajn), mutableSetOf(r.getString(R.string.continent_asia)), mutableSetOf(r.getString(R.string.color_red), r.getString(R.string.color_white)), R.drawable.bahrajn)
+            val bangladesz = Panstwo(getString(R.string.country_bangladesz), mutableSetOf(r.getString(R.string.continent_asia)), mutableSetOf(r.getString(R.string.color_green), r.getString(R.string.color_red)), R.drawable.bangladesz)
+            val birma = Panstwo(getString(R.string.country_birma), mutableSetOf(r.getString(R.string.continent_asia)), mutableSetOf(r.getString(R.string.color_red), r.getString(R.string.color_blue), r.getString(R.string.color_white)), R.drawable.birma)
+            val bhutan = Panstwo(getString(R.string.country_bhutan), mutableSetOf(r.getString(R.string.continent_asia)), mutableSetOf(r.getString(R.string.color_orange), r.getString(R.string.color_yellow)), R.drawable.bhutan)
+            val chinskarepublikaludowa = Panstwo(getString(R.string.country_chinskarepublikaludowa), mutableSetOf(r.getString(R.string.continent_asia)), mutableSetOf(r.getString(R.string.color_red), r.getString(R.string.color_yellow)), R.drawable.chinskarepublikaludowa)
+            val indie = Panstwo(getString(R.string.country_indie), mutableSetOf(r.getString(R.string.continent_asia)), mutableSetOf(r.getString(R.string.color_orange), r.getString(R.string.color_white), r.getString(R.string.color_green)), R.drawable.indie)
+            val indonezja = Panstwo(getString(R.string.country_indonezja), mutableSetOf(r.getString(R.string.continent_asia)), mutableSetOf(r.getString(R.string.color_red), r.getString(R.string.color_white)), R.drawable.indonezja)
+            val irak = Panstwo(getString(R.string.country_irak), mutableSetOf(r.getString(R.string.continent_asia)), mutableSetOf(r.getString(R.string.color_red), r.getString(R.string.color_white), r.getString(R.string.color_black)), R.drawable.irak)
+            val iran = Panstwo(getString(R.string.country_iran), mutableSetOf(r.getString(R.string.continent_asia)), mutableSetOf(r.getString(R.string.color_green), r.getString(R.string.color_white), r.getString(R.string.color_red)), R.drawable.iran)
+            val izrael = Panstwo(getString(R.string.country_izrael), mutableSetOf(r.getString(R.string.continent_asia)), mutableSetOf(r.getString(R.string.color_blue), r.getString(R.string.color_white)), R.drawable.izrael)
+            val japonia = Panstwo(getString(R.string.country_japonia), mutableSetOf(r.getString(R.string.continent_asia)), mutableSetOf(r.getString(R.string.color_red), r.getString(R.string.color_white)), R.drawable.japonia)
+            val jemen = Panstwo(getString(R.string.country_jemen), mutableSetOf(r.getString(R.string.continent_asia)), mutableSetOf(r.getString(R.string.color_red), r.getString(R.string.color_white), r.getString(R.string.color_black)), R.drawable.jemen)
+            val jordania = Panstwo(getString(R.string.country_jordania), mutableSetOf(r.getString(R.string.continent_asia)), mutableSetOf(r.getString(R.string.color_black), r.getString(R.string.color_white), r.getString(R.string.color_green), r.getString(R.string.color_red)), R.drawable.jordania)
+            val kazachstan = Panstwo(getString(R.string.country_kazachstan), mutableSetOf(r.getString(R.string.continent_asia)), mutableSetOf(r.getString(R.string.color_blue), r.getString(R.string.color_yellow)), R.drawable.kazachstan)
+            val kirgistan = Panstwo(getString(R.string.country_kirgistan), mutableSetOf(r.getString(R.string.continent_asia)), mutableSetOf(r.getString(R.string.color_red), r.getString(R.string.color_yellow), r.getString(R.string.color_blue)), R.drawable.kirgistan)
+            val koreapolnocna = Panstwo(getString(R.string.country_koreapolnocna), mutableSetOf(r.getString(R.string.continent_asia)), mutableSetOf(r.getString(R.string.color_red), r.getString(R.string.color_white), r.getString(R.string.color_blue)), R.drawable.koreapolnocna)
+            val koreapoludniowa = Panstwo(getString(R.string.country_koreapoludniowa), mutableSetOf(r.getString(R.string.continent_asia)), mutableSetOf(r.getString(R.string.color_red), r.getString(R.string.color_white), r.getString(R.string.color_blue)), R.drawable.koreapoludniowa)
+            val kuwejt = Panstwo(getString(R.string.country_kuwejt), mutableSetOf(r.getString(R.string.continent_asia)), mutableSetOf(r.getString(R.string.color_green), r.getString(R.string.color_white), r.getString(R.string.color_red)), R.drawable.kuwejt)
+            val laos = Panstwo(getString(R.string.country_laos), mutableSetOf(r.getString(R.string.continent_asia)), mutableSetOf(r.getString(R.string.color_blue), r.getString(R.string.color_red)), R.drawable.laos)
+            val liban = Panstwo(getString(R.string.country_liban), mutableSetOf(r.getString(R.string.continent_asia)), mutableSetOf(r.getString(R.string.color_red), r.getString(R.string.color_white)), R.drawable.liban)
+            val malezja = Panstwo(getString(R.string.country_malezja), mutableSetOf(r.getString(R.string.continent_asia)), mutableSetOf(r.getString(R.string.color_red), r.getString(R.string.color_white), r.getString(R.string.color_blue)), R.drawable.malezja)
+            val maledivy = Panstwo(getString(R.string.country_maledivy), mutableSetOf(r.getString(R.string.continent_asia)), mutableSetOf(r.getString(R.string.color_red), r.getString(R.string.color_white), r.getString(R.string.color_green)), R.drawable.maledivy)
+            val mongolia = Panstwo(getString(R.string.country_mongolia), mutableSetOf(r.getString(R.string.continent_asia)), mutableSetOf(r.getString(R.string.color_red), r.getString(R.string.color_blue)), R.drawable.mongolia)
+            val nepal = Panstwo(getString(R.string.country_nepal), mutableSetOf(r.getString(R.string.continent_asia)), mutableSetOf(r.getString(R.string.color_red), r.getString(R.string.color_white)), R.drawable.nepal)
+            val oman = Panstwo(getString(R.string.country_oman), mutableSetOf(r.getString(R.string.continent_asia)), mutableSetOf(r.getString(R.string.color_red), r.getString(R.string.color_white), r.getString(R.string.color_green)), R.drawable.oman)
+            val pakistan = Panstwo(getString(R.string.country_pakistan), mutableSetOf(r.getString(R.string.continent_asia)), mutableSetOf(r.getString(R.string.color_green), r.getString(R.string.color_white)), R.drawable.pakistan)
+            val filipiny = Panstwo(getString(R.string.country_filipiny), mutableSetOf(r.getString(R.string.continent_asia)), mutableSetOf(r.getString(R.string.color_blue), r.getString(R.string.color_red), r.getString(R.string.color_yellow)), R.drawable.filipiny)
+            val katar = Panstwo(getString(R.string.country_katar), mutableSetOf(r.getString(R.string.continent_asia)), mutableSetOf(r.getString(R.string.color_red), r.getString(R.string.color_white)), R.drawable.qatar)
+            val singapur = Panstwo(getString(R.string.country_singapur), mutableSetOf(r.getString(R.string.continent_asia)), mutableSetOf(r.getString(R.string.color_red), r.getString(R.string.color_white)), R.drawable.singapur)
+            val srilanka = Panstwo(getString(R.string.country_srilanka), mutableSetOf(r.getString(R.string.continent_asia)), mutableSetOf(r.getString(R.string.color_yellow), r.getString(R.string.color_red), r.getString(R.string.color_green)), R.drawable.srilanka)
+            val syria = Panstwo(getString(R.string.country_syria), mutableSetOf(r.getString(R.string.continent_asia)), mutableSetOf(r.getString(R.string.color_red), r.getString(R.string.color_white), r.getString(R.string.color_black)), R.drawable.syria)
+            val tadzykistan = Panstwo(getString(R.string.country_tadzykistan), mutableSetOf(r.getString(R.string.continent_asia)), mutableSetOf(r.getString(R.string.color_red), r.getString(R.string.color_white), r.getString(R.string.color_green)), R.drawable.tadzykistan)
+            val tajlandia = Panstwo(getString(R.string.country_tajlandia), mutableSetOf(r.getString(R.string.continent_asia)), mutableSetOf(r.getString(R.string.color_red), r.getString(R.string.color_white), r.getString(R.string.color_blue)), R.drawable.tajlandia)
+            val timorwschodni = Panstwo(getString(R.string.country_timorwschodni), mutableSetOf(r.getString(R.string.continent_asia)), mutableSetOf(r.getString(R.string.color_red), r.getString(R.string.color_black), r.getString(R.string.color_yellow)), R.drawable.timorwschodni)
+            val turkmenistan = Panstwo(getString(R.string.country_turkmenistan), mutableSetOf(r.getString(R.string.continent_asia)), mutableSetOf(r.getString(R.string.color_green), r.getString(R.string.color_red)), R.drawable.turkmenistan)
+            val uzbeckistan = Panstwo(getString(R.string.country_uzbeckistan), mutableSetOf(r.getString(R.string.continent_asia)), mutableSetOf(r.getString(R.string.color_blue), r.getString(R.string.color_white), r.getString(R.string.color_green)), R.drawable.uzbekistan)
+            val wietnam = Panstwo(getString(R.string.country_wietnam), mutableSetOf(r.getString(R.string.continent_asia)), mutableSetOf(r.getString(R.string.color_red), r.getString(R.string.color_yellow)), R.drawable.wietnam)
+            val zjednoczoneemiratyarabskie = Panstwo(getString(R.string.country_zjednoczoneemiratyarabskie), mutableSetOf(r.getString(R.string.continent_asia)), mutableSetOf(r.getString(R.string.color_black), r.getString(R.string.color_white), r.getString(R.string.color_green), r.getString(R.string.color_red)), R.drawable.emiratyarabskie)
 
+            val algeria = Panstwo(r.getString(R.string.country_algeria), mutableSetOf(r.getString(R.string.continent_africa)), mutableSetOf(r.getString(R.string.color_red), r.getString(R.string.color_white), r.getString(R.string.color_green)), R.drawable.algeria)
+            val angola = Panstwo(r.getString(R.string.country_angola), mutableSetOf(r.getString(R.string.continent_africa)), mutableSetOf(r.getString(R.string.color_red), r.getString(R.string.color_black), r.getString(R.string.color_yellow)), R.drawable.angola)
+            val benin = Panstwo(r.getString(R.string.country_benin), mutableSetOf(r.getString(R.string.continent_africa)), mutableSetOf(r.getString(R.string.color_green), r.getString(R.string.color_yellow), r.getString(R.string.color_red)), R.drawable.benin)
+            val botswana = Panstwo(r.getString(R.string.country_botswana), mutableSetOf(r.getString(R.string.continent_africa)), mutableSetOf(r.getString(R.string.color_blue), r.getString(R.string.color_black), r.getString(R.string.color_white)), R.drawable.botswana)
+            val burkinaFaso = Panstwo(r.getString(R.string.country_burkina_faso), mutableSetOf(r.getString(R.string.continent_africa)), mutableSetOf(r.getString(R.string.color_red), r.getString(R.string.color_green), r.getString(R.string.color_yellow)), R.drawable.burkina_faso)
+            val burundi = Panstwo(r.getString(R.string.country_burundi), mutableSetOf(r.getString(R.string.continent_africa)), mutableSetOf(r.getString(R.string.color_red), r.getString(R.string.color_green)), R.drawable.burundi)
+            val chad = Panstwo(r.getString(R.string.country_chad), mutableSetOf(r.getString(R.string.continent_africa)), mutableSetOf(r.getString(R.string.color_blue), r.getString(R.string.color_yellow), r.getString(R.string.color_red)), R.drawable.chad)
+            val democraticRepublicOfCongo = Panstwo(r.getString(R.string.country_democratic_republic_of_congo), mutableSetOf(r.getString(R.string.continent_africa)), mutableSetOf(r.getString(R.string.color_blue), r.getString(R.string.color_yellow), r.getString(R.string.color_red)), R.drawable.democratic_republic_of_congo)
+            val djibouti = Panstwo(r.getString(R.string.country_djibouti), mutableSetOf(r.getString(R.string.continent_africa)), mutableSetOf(r.getString(R.string.color_blue), r.getString(R.string.color_white), r.getString(R.string.color_green)), R.drawable.djibouti)
+            val egypt = Panstwo(r.getString(R.string.country_egypt), mutableSetOf(r.getString(R.string.continent_africa)), mutableSetOf(r.getString(R.string.color_red), r.getString(R.string.color_white), r.getString(R.string.color_black)), R.drawable.egypt)
+            val ivoryCoast = Panstwo(r.getString(R.string.country_ivory_coast), mutableSetOf(r.getString(R.string.continent_africa)), mutableSetOf(r.getString(R.string.color_orange), r.getString(R.string.color_white), r.getString(R.string.color_green)), R.drawable.ivory_coast)
+            val eritrea = Panstwo(r.getString(R.string.country_eritrea), mutableSetOf(r.getString(R.string.continent_africa)), mutableSetOf(r.getString(R.string.color_red), r.getString(R.string.color_green), r.getString(R.string.color_blue), r.getString(R.string.color_yellow)), R.drawable.eritrea)
+            val eswatini = Panstwo(r.getString(R.string.country_eswatini), mutableSetOf(r.getString(R.string.continent_africa)), mutableSetOf(r.getString(R.string.color_blue), r.getString(R.string.color_yellow), r.getString(R.string.color_red)), R.drawable.eswatini)
+            val ethiopia = Panstwo(r.getString(R.string.country_ethiopia), mutableSetOf(r.getString(R.string.continent_africa)), mutableSetOf(r.getString(R.string.color_green), r.getString(R.string.color_yellow), r.getString(R.string.color_red)), R.drawable.ethiopia)
+            val gabon = Panstwo(r.getString(R.string.country_gabon), mutableSetOf(r.getString(R.string.continent_africa)), mutableSetOf(r.getString(R.string.color_green), r.getString(R.string.color_yellow), r.getString(R.string.color_blue)), R.drawable.gabon)
+            val gambia = Panstwo(r.getString(R.string.country_gambia), mutableSetOf(r.getString(R.string.continent_africa)), mutableSetOf(r.getString(R.string.color_red), r.getString(R.string.color_blue), r.getString(R.string.color_green)), R.drawable.gambia)
+            val ghana = Panstwo(r.getString(R.string.country_ghana), mutableSetOf(r.getString(R.string.continent_africa)), mutableSetOf(r.getString(R.string.color_red), r.getString(R.string.color_yellow), r.getString(R.string.color_green), r.getString(R.string.color_black)), R.drawable.ghana)
+            val guinea = Panstwo(r.getString(R.string.country_guinea), mutableSetOf(r.getString(R.string.continent_africa)), mutableSetOf(r.getString(R.string.color_red), r.getString(R.string.color_yellow), r.getString(R.string.color_green)), R.drawable.guinea)
+            val guineaBissau = Panstwo(r.getString(R.string.country_guinea_bissau), mutableSetOf(r.getString(R.string.continent_africa)), mutableSetOf(r.getString(R.string.color_red), r.getString(R.string.color_yellow), r.getString(R.string.color_green)), R.drawable.guinea_bissau)
+            val equatorialGuinea = Panstwo(r.getString(R.string.country_equatorial_guinea), mutableSetOf(r.getString(R.string.continent_africa)), mutableSetOf(r.getString(R.string.color_red), r.getString(R.string.color_white), r.getString(R.string.color_green), r.getString(R.string.color_blue)), R.drawable.equatorial_guinea)
+            val cameroon = Panstwo(r.getString(R.string.country_cameroon), mutableSetOf(r.getString(R.string.continent_africa)), mutableSetOf(r.getString(R.string.color_green), r.getString(R.string.color_red), r.getString(R.string.color_yellow)), R.drawable.cameroon)
+            val kenya = Panstwo(r.getString(R.string.country_kenya), mutableSetOf(r.getString(R.string.continent_africa)), mutableSetOf(r.getString(R.string.color_black), r.getString(R.string.color_red), r.getString(R.string.color_green)), R.drawable.kenya)
+            val comoros = Panstwo(r.getString(R.string.country_comoros), mutableSetOf(r.getString(R.string.continent_africa)), mutableSetOf(r.getString(R.string.color_blue), r.getString(R.string.color_yellow), r.getString(R.string.color_white)), R.drawable.comoros)
+            val lesotho = Panstwo(r.getString(R.string.country_lesotho), mutableSetOf(r.getString(R.string.continent_africa)), mutableSetOf(r.getString(R.string.color_blue), r.getString(R.string.color_white), r.getString(R.string.color_green)), R.drawable.lesotho)
+            val liberia = Panstwo(r.getString(R.string.country_liberia), mutableSetOf(r.getString(R.string.continent_africa)), mutableSetOf(r.getString(R.string.color_red), r.getString(R.string.color_white), r.getString(R.string.color_blue)), R.drawable.liberia)
+            val libya = Panstwo(r.getString(R.string.country_libya), mutableSetOf(r.getString(R.string.continent_africa)), mutableSetOf(r.getString(R.string.color_red), r.getString(R.string.color_black), r.getString(R.string.color_green)), R.drawable.libya)
+            val madagascar = Panstwo(r.getString(R.string.country_madagascar), mutableSetOf(r.getString(R.string.continent_africa)), mutableSetOf(r.getString(R.string.color_white), r.getString(R.string.color_red), r.getString(R.string.color_green)), R.drawable.madagascar)
+            val malawi = Panstwo(r.getString(R.string.country_malawi), mutableSetOf(r.getString(R.string.continent_africa)), mutableSetOf(r.getString(R.string.color_black), r.getString(R.string.color_red), r.getString(R.string.color_green)), R.drawable.malawi)
+            val mali = Panstwo(r.getString(R.string.country_mali), mutableSetOf(r.getString(R.string.continent_africa)), mutableSetOf(r.getString(R.string.color_green), r.getString(R.string.color_yellow), r.getString(R.string.color_red)), R.drawable.mali)
+            val morocco = Panstwo(r.getString(R.string.country_morocco), mutableSetOf(r.getString(R.string.continent_africa)), mutableSetOf(r.getString(R.string.color_red), r.getString(R.string.color_green)), R.drawable.morocco)
+            val mauritania = Panstwo(r.getString(R.string.country_mauritania), mutableSetOf(r.getString(R.string.continent_africa)), mutableSetOf(r.getString(R.string.color_green), r.getString(R.string.color_yellow), r.getString(R.string.color_red)), R.drawable.mauritania)
+            val mauritius = Panstwo(r.getString(R.string.country_mauritius), mutableSetOf(r.getString(R.string.continent_africa)), mutableSetOf(r.getString(R.string.color_red), r.getString(R.string.color_blue), r.getString(R.string.color_yellow), r.getString(R.string.color_green)), R.drawable.mauritius)
+            val mozambique = Panstwo(r.getString(R.string.country_mozambique), mutableSetOf(r.getString(R.string.continent_africa)), mutableSetOf(r.getString(R.string.color_green), r.getString(R.string.color_black), r.getString(R.string.color_yellow), r.getString(R.string.color_white)), R.drawable.mozambique)
+            val namibia = Panstwo(r.getString(R.string.country_namibia), mutableSetOf(r.getString(R.string.continent_africa)), mutableSetOf(r.getString(R.string.color_blue), r.getString(R.string.color_red), r.getString(R.string.color_green), r.getString(R.string.color_white)), R.drawable.namibia)
+            val niger = Panstwo(r.getString(R.string.country_niger), mutableSetOf(r.getString(R.string.continent_africa)), mutableSetOf(r.getString(R.string.color_orange), r.getString(R.string.color_white), r.getString(R.string.color_green)), R.drawable.niger)
+            val nigeria = Panstwo(r.getString(R.string.country_nigeria), mutableSetOf(r.getString(R.string.continent_africa)), mutableSetOf(r.getString(R.string.color_green), r.getString(R.string.color_white), r.getString(R.string.color_green)), R.drawable.nigeria)
+            val southAfrica = Panstwo(r.getString(R.string.country_south_africa), mutableSetOf(r.getString(R.string.continent_africa)), mutableSetOf(r.getString(R.string.color_black), r.getString(R.string.color_yellow), r.getString(R.string.color_green), r.getString(R.string.color_blue)), R.drawable.south_africa)
+            val centralAfricanRepublic = Panstwo(r.getString(R.string.country_central_african_republic), mutableSetOf(r.getString(R.string.continent_africa)), mutableSetOf(r.getString(R.string.color_blue), r.getString(R.string.color_white), r.getString(R.string.color_green), r.getString(R.string.color_yellow)), R.drawable.central_african_republic)
+            val capeVerde = Panstwo(r.getString(R.string.country_cape_verde), mutableSetOf(r.getString(R.string.continent_africa)), mutableSetOf(r.getString(R.string.color_blue), r.getString(R.string.color_white), r.getString(R.string.color_red)), R.drawable.cape_verde)
+            val rwanda = Panstwo(r.getString(R.string.country_rwanda), mutableSetOf(r.getString(R.string.continent_africa)), mutableSetOf(r.getString(R.string.color_blue), r.getString(R.string.color_yellow), r.getString(R.string.color_green), r.getString(R.string.color_red)), R.drawable.rwanda)
+            val senegal = Panstwo(r.getString(R.string.country_senegal), mutableSetOf(r.getString(R.string.continent_africa)), mutableSetOf(r.getString(R.string.color_green), r.getString(R.string.color_yellow), r.getString(R.string.color_red)), R.drawable.senegal)
+            val seychelles = Panstwo(r.getString(R.string.country_seychelles), mutableSetOf(r.getString(R.string.continent_africa)), mutableSetOf(r.getString(R.string.color_blue), r.getString(R.string.color_yellow), r.getString(R.string.color_red), r.getString(R.string.color_white)), R.drawable.seychelles)
+            val sierraLeone = Panstwo(r.getString(R.string.country_sierra_leone), mutableSetOf(r.getString(R.string.continent_africa)), mutableSetOf(r.getString(R.string.color_green), r.getString(R.string.color_white), r.getString(R.string.color_blue)), R.drawable.sierra_leone)
+            val somalia = Panstwo(r.getString(R.string.country_somalia), mutableSetOf(r.getString(R.string.continent_africa)), mutableSetOf(r.getString(R.string.color_blue), r.getString(R.string.color_white)), R.drawable.somalia)
+            val sudan = Panstwo(r.getString(R.string.country_sudan), mutableSetOf(r.getString(R.string.continent_africa)), mutableSetOf(r.getString(R.string.color_red), r.getString(R.string.color_white), r.getString(R.string.color_black)), R.drawable.sudan)
+            val southSudan = Panstwo(r.getString(R.string.country_south_sudan), mutableSetOf(r.getString(R.string.continent_africa)), mutableSetOf(r.getString(R.string.color_black), r.getString(R.string.color_red), r.getString(R.string.color_green), r.getString(R.string.color_blue)), R.drawable.south_sudan)
+            val tanzania = Panstwo(r.getString(R.string.country_tanzania), mutableSetOf(r.getString(R.string.continent_africa)), mutableSetOf(r.getString(R.string.color_green), r.getString(R.string.color_yellow), r.getString(R.string.color_black)), R.drawable.tanzania)
+            val togo = Panstwo(r.getString(R.string.country_togo), mutableSetOf(r.getString(R.string.continent_africa)), mutableSetOf(r.getString(R.string.color_green), r.getString(R.string.color_yellow), r.getString(R.string.color_red)), R.drawable.togo)
+            val tunisia = Panstwo(r.getString(R.string.country_tunisia), mutableSetOf(r.getString(R.string.continent_africa)), mutableSetOf(r.getString(R.string.color_red), r.getString(R.string.color_white)), R.drawable.tunisia)
+            val uganda = Panstwo(r.getString(R.string.country_uganda), mutableSetOf(r.getString(R.string.continent_africa)), mutableSetOf(r.getString(R.string.color_black), r.getString(R.string.color_yellow), r.getString(R.string.color_red)), R.drawable.uganda)
+            val zambia = Panstwo(r.getString(R.string.country_zambia), mutableSetOf(r.getString(R.string.continent_africa)), mutableSetOf(r.getString(R.string.color_green), r.getString(R.string.color_orange), r.getString(R.string.color_black)), R.drawable.zambia)
+            val zimbabwe = Panstwo(r.getString(R.string.country_zimbabwe), mutableSetOf(r.getString(R.string.continent_africa)), mutableSetOf(r.getString(R.string.color_green), r.getString(R.string.color_yellow), r.getString(R.string.color_red)), R.drawable.zimbabwe)
 
             val countriesList = mutableListOf(
                 afganistan,
@@ -300,6 +352,58 @@ class MainActivity : ComponentActivity() {
                 wenezuela,
                 wlochy,
                 zjednoczoneemiratyarabskie,
+                algeria,
+                angola,
+                benin,
+                botswana,
+                burkinaFaso,
+                burundi,
+                chad,
+                democraticRepublicOfCongo,
+                djibouti,
+                egypt,
+                ivoryCoast,
+                eritrea,
+                eswatini,
+                ethiopia,
+                gabon,
+                gambia,
+                ghana,
+                guinea,
+                guineaBissau,
+                equatorialGuinea,
+                cameroon,
+                kenya,
+                comoros,
+                lesotho,
+                liberia,
+                libya,
+                madagascar,
+                malawi,
+                mali,
+                morocco,
+                mauritania,
+                mauritius,
+                namibia,
+                niger,
+                nigeria,
+                southAfrica,
+                centralAfricanRepublic,
+                capeVerde,
+                rwanda,
+                senegal,
+                seychelles,
+                sierraLeone,
+                somalia,
+                sudan,
+                southSudan,
+                tanzania,
+                togo,
+                tunisia,
+                uganda,
+                zambia,
+                zimbabwe,
+                mozambique
             )
 
             Main(countriesList,
@@ -321,6 +425,12 @@ class MainActivity : ComponentActivity() {
                 mapOf(
                     "filters" to r.getString(R.string.buttonText_filtry),
                     "results" to r.getString(R.string.buttonText_wyniki)
+                ),
+                setOf(
+                    r.getString(R.string.continent_asia),
+                    r.getString(R.string.continent_america),
+                    r.getString(R.string.continent_africa),
+                    r.getString(R.string.continent_europe),
                 )
             )
         }
@@ -334,6 +444,7 @@ fun Main(
     propertiesColorInput: Set<String>,
     propertiesLayoutInput: Set<String>,
     buttonTexts: Map<String, String>,
+    continents: Set<String>
     ) {
     val animationDuration = 850
     val filtersString = buttonTexts["filters"] ?: "filters"
@@ -343,6 +454,12 @@ fun Main(
     }
     val propertiesLayout by remember {
         mutableStateOf(propertiesLayoutInput)
+    }
+    val propertiesContinents by remember {
+        mutableStateOf(continents)
+    }
+    val continentsSelected = remember {
+        mutableStateListOf<String>()
     }
     val propertiesSelected = remember {
         mutableStateListOf<String>()
@@ -369,7 +486,7 @@ fun Main(
             buttonText = resultsString
             Column(modifier = Modifier
                 .fillMaxWidth(0.9f)
-                .fillMaxHeight(0.9f)
+                .fillMaxHeight(1.0f)
                 .padding(bottom = 20.dp),
                 horizontalAlignment = Alignment.CenterHorizontally,
                 verticalArrangement = Arrangement.SpaceEvenly
@@ -394,9 +511,9 @@ fun Main(
                             )
                             Text(
                                 modifier = Modifier
-                                    .padding(vertical = 15.dp),
+                                    .padding(vertical = 12.dp),
                                 text = property,
-                                fontSize = 15.sp,
+                                fontSize = 18.sp,
                                 fontWeight = FontWeight.Bold,
                                 textAlign = TextAlign.Center,
                             )
@@ -411,39 +528,78 @@ fun Main(
                         }
                     }
                 }
-                Spacer(modifier = Modifier.height(5.dp))
-                Column {
-                    propertiesLayout.forEach { property ->
-                        Row(
-                            modifier = Modifier
-                                .padding(4.dp)
-                                .fillMaxWidth(0.5f)
-                        ) {
-                            val checkedState = remember { mutableStateOf(false) }
-
-                            Checkbox(
-                                checked = checkedState.value,
-                                onCheckedChange = { checkedState.value = it },
-                                modifier = Modifier.padding(end = 8.dp),
-                                colors = CheckboxDefaults.colors(
-                                    checkedColor = Color.Black,
-                                    uncheckedColor = LocalContentColor.current
-                                ),
-                            )
-                            Text(
+                //pacer(modifier = Modifier.height(5.dp))
+                Row {
+                    Column {
+                        propertiesLayout.forEach { property ->
+                            Row(
                                 modifier = Modifier
-                                    .padding(vertical = 15.dp),
-                                text = property,
-                                fontSize = 15.sp,
-                                fontWeight = FontWeight.Bold,
-                                textAlign = TextAlign.Center,
-                            )
+                                    .padding(4.dp)
+                                    .fillMaxWidth(0.4f)
+                            ) {
+                                val checkedState = remember { mutableStateOf(false) }
 
-                            LaunchedEffect(checkedState.value) {
-                                if (checkedState.value) {
-                                    propertiesSelected.add(property)
-                                } else {
-                                    propertiesSelected.remove(property)
+                                Checkbox(
+                                    checked = checkedState.value,
+                                    onCheckedChange = { checkedState.value = it },
+                                    modifier = Modifier.padding(end = 8.dp),
+                                    colors = CheckboxDefaults.colors(
+                                        checkedColor = Color.Black,
+                                        uncheckedColor = LocalContentColor.current
+                                    ),
+                                )
+                                Text(
+                                    modifier = Modifier
+                                        .padding(vertical = 12.dp),
+                                    text = property,
+                                    fontSize = 18.sp,
+                                    fontWeight = FontWeight.Bold,
+                                    textAlign = TextAlign.Center,
+                                )
+
+                                LaunchedEffect(checkedState.value) {
+                                    if (checkedState.value) {
+                                        propertiesSelected.add(property)
+                                    } else {
+                                        propertiesSelected.remove(property)
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    Column {
+                        continents.forEach { continent ->
+                            Row(
+                                modifier = Modifier
+                                    .padding(4.dp)
+                                    .fillMaxWidth(0.9f)
+                            ) {
+                                val checkedState = remember { mutableStateOf(false) }
+
+                                Checkbox(
+                                    checked = checkedState.value,
+                                    onCheckedChange = { checkedState.value = it },
+                                    modifier = Modifier.padding(end = 8.dp),
+                                    colors = CheckboxDefaults.colors(
+                                        checkedColor = Color.Black,
+                                        uncheckedColor = LocalContentColor.current
+                                    ),
+                                )
+                                Text(
+                                    modifier = Modifier
+                                        .padding(vertical = 12.dp),
+                                    text = continent,
+                                    fontSize = 18.sp,
+                                    fontWeight = FontWeight.Bold,
+                                    textAlign = TextAlign.Center,
+                                )
+
+                                LaunchedEffect(checkedState.value) {
+                                    if (checkedState.value) {
+                                        continentsSelected.add(continent)
+                                    } else {
+                                        continentsSelected.remove(continent)
+                                    }
                                 }
                             }
                         }
@@ -470,8 +626,18 @@ fun Main(
                 val filterList by remember {
                     mutableStateOf(mutableSetOf<String>())
                 }
+                for (i in propertiesSelected) {
+                    filterList.add(i)
+                }
+
+                val continentsList by remember {
+                    mutableStateOf(mutableSetOf<String>())
+                }
+                for (i in continentsSelected) {
+                    continentsList.add(i)
+                }
                 Text(
-                    text = "Count: ${filter(countries, filterList).size}",
+                    text = "Count: ${filter(countries, filterList, continentsList).size}",
                     fontSize = 24.sp,
                     fontWeight = FontWeight.Bold,
                     color = Color.Black,
@@ -480,11 +646,9 @@ fun Main(
                         .fillMaxWidth()
                 )
                 LazyColumn {
-                    for (i in propertiesSelected) {
-                        filterList.add(i)
-                    }
+
                     itemsIndexed(
-                        filter(countries, filterList)
+                        filter(countries, filterList, continentsList)
                     ) { index, country ->
                         Row(
                             modifier = Modifier.height(120.dp)
