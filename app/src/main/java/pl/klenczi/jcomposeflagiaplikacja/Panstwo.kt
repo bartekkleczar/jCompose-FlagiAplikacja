@@ -88,23 +88,76 @@ var stlucia = Panstwo("St. Lucia", mutableSetOf("blue", "yellow", "black", "othe
 var stvimcentgrenadyny = Panstwo("St. Vimcent Grenadyny", mutableSetOf("blue", "green", "yellow", "vertical"), R.drawable.stvimcentgrenadyny)
 var salwador = Panstwo("Salwador", mutableSetOf("blue", "white", "blue", "horizontal"), R.drawable.salwador)
 
+var afganistan = Panstwo("Afganistan", mutableSetOf("black", "white"), R.drawable.afganistan)
+var arabiasaudyjska = Panstwo("Arabia Saudyjska", mutableSetOf("green", "white"), R.drawable.arabiasaudyjska)
+var armenia = Panstwo("Armenia", mutableSetOf("red", "blue", "orange"), R.drawable.armenia)
+var azerbejdzan = Panstwo("Azerbejdżan", mutableSetOf("blue", "red", "green"), R.drawable.azerbejdzan)
+var bahrajn = Panstwo("Bahrajn", mutableSetOf("red", "white"), R.drawable.bahrajn)
+var bangladesz = Panstwo("Bangladesz", mutableSetOf("green", "red"), R.drawable.bangladesz)
+var birma = Panstwo("Birma", mutableSetOf("red", "blue", "white"), R.drawable.birma)
+var bhutan = Panstwo("Bhutan", mutableSetOf("orange", "yellow"), R.drawable.bhutan)
+var chinskarepublikaludowa = Panstwo("Chińska Republika Ludowa", mutableSetOf("red", "yellow"), R.drawable.chinskarepublikaludowa)
+var indie = Panstwo("Indie", mutableSetOf("orange", "white", "green"), R.drawable.indie)
+var indonezja = Panstwo("Indonezja", mutableSetOf("red", "white"), R.drawable.indonezja)
+var irak = Panstwo("Irak", mutableSetOf("red", "white", "black"), R.drawable.irak)
+var iran = Panstwo("Iran", mutableSetOf("green", "white", "red"), R.drawable.iran)
+var izrael = Panstwo("Izrael", mutableSetOf("blue", "white"), R.drawable.izrael)
+var japonia = Panstwo("Japonia", mutableSetOf("red", "white"), R.drawable.japonia)
+var jemen = Panstwo("Jemen", mutableSetOf("red", "white", "black"), R.drawable.jemen)
+var jordania = Panstwo("Jordania", mutableSetOf("black", "white", "green", "red"), R.drawable.jordania)
+var kazachstan = Panstwo("Kazachstan", mutableSetOf("blue", "yellow"), R.drawable.kazachstan)
+var kirgistan = Panstwo("Kirgistan", mutableSetOf("red", "yellow", "blue"), R.drawable.kirgistan)
+var koreapolnocna = Panstwo("Korea Północna", mutableSetOf("red", "white", "blue"), R.drawable.koreapolnocna)
+var koreapoludniowa = Panstwo("Korea Południowa", mutableSetOf("red", "white", "blue"), R.drawable.koreapoludniowa)
+var kuwejt = Panstwo("Kuwejt", mutableSetOf("green", "white", "red"), R.drawable.kuwejt)
+var laos = Panstwo("Laos", mutableSetOf("blue", "red"), R.drawable.laos)
+var liban = Panstwo("Liban", mutableSetOf("red", "white"), R.drawable.liban)
+var malezja = Panstwo("Malezja", mutableSetOf("red", "white", "blue"), R.drawable.malezja)
+var maledivy = Panstwo("Malediwy", mutableSetOf("red", "white", "green"), R.drawable.maledivy)
+var mongolia = Panstwo("Mongolia", mutableSetOf("red", "blue"), R.drawable.mongolia)
+var nepal = Panstwo("Nepal", mutableSetOf("red", "white"), R.drawable.nepal)
+var oman = Panstwo("Oman", mutableSetOf("red", "white", "green"), R.drawable.oman)
+var pakistan = Panstwo("Pakistan", mutableSetOf("green", "white"), R.drawable.pakistan)
+var filipiny = Panstwo("Filipiny", mutableSetOf("blue", "red", "yellow"), R.drawable.filipiny)
+var katar = Panstwo("Katar", mutableSetOf("czerwony", "white"), R.drawable.qatar)
+var singapur = Panstwo("Singapur", mutableSetOf("red", "white"), R.drawable.singapur)
+var srilanka = Panstwo("Sri Lanka", mutableSetOf("yellow", "red", "green"), R.drawable.srilanka)
+var syria = Panstwo("Syria", mutableSetOf("red", "white", "black"), R.drawable.syria)
+var tadzykistan = Panstwo("Tadżykistan", mutableSetOf("red", "white", "green"), R.drawable.tadzykistan)
+var tajlandia = Panstwo("Tajlandia", mutableSetOf("red", "white", "blue"), R.drawable.tajlandia)
+var timorwschodni = Panstwo("Timor Wschodni", mutableSetOf("red", "black", "yellow"), R.drawable.timorwschodni)
+var turkmenistan = Panstwo("Turkmenistan", mutableSetOf("green", "red"), R.drawable.turkmenistan)
+var uzbeckistan = Panstwo("Uzbekistan", mutableSetOf("blue", "white", "green"), R.drawable.uzbekistan)
+var wietnam = Panstwo("Wietnam", mutableSetOf("red", "yellow"), R.drawable.wietnam)
+var zjednoczoneemiratyarabskie = Panstwo("Zjednoczone Emiraty Arabskie", mutableSetOf("black", "white", "green", "red"), R.drawable.emiratyarabskie)
+
+
 val countriesList = mutableListOf(
+    afganistan,
     albania,
     andora,
     antiguabarbuda,
+    arabiasaudyjska,
     argentina,
+    armenia,
+    azerbejdzan,
     austria,
     bahamy,
+    bahrajn,
+    bangladesz,
     barbados,
     belgia,
     belize,
+    bhutan,
     bialorus,
+    birma,
     boliwia,
     bosnia,
     brazylia,
     bulgaria,
     chorwacja,
     chili,
+    chinskarepublikaludowa,
     cypr,
     czarnogora,
     czechy,
@@ -113,6 +166,7 @@ val countriesList = mutableListOf(
     dominikana,
     ekwador,
     estonia,
+    filipiny,
     finlandia,
     francja,
     gibraltar,
@@ -122,24 +176,46 @@ val countriesList = mutableListOf(
     gwatemala,
     haiti,
     honduras,
+    indie,
+    indonezja,
+    irak,
+    iran,
     irlandia,
     islandia,
+    izrael,
     jamajka,
+    japonia,
+    jemen,
+    jordania,
     kanada,
+    katar,
+    kazachstan,
+    kirgistan,
     kolumbia,
+    koreapolnocna,
+    koreapoludniowa,
     kostaryka,
     kuba,
+    kuwejt,
+    laos,
+    liban,
     liechtenstein,
     litwa,
     luksemburg,
     lotwa,
+    malezja,
+    maledivy,
     malta,
     macedonia,
     meksyk,
     monako,
+    mongolia,
+    nepal,
     nikaragua,
     niemcy,
     norwegia,
+    oman,
+    pakistan,
     panama,
     paragwaj,
     peru,
@@ -150,21 +226,31 @@ val countriesList = mutableListOf(
     salwador,
     sanmarino,
     serbia,
+    singapur,
     slowacja,
     slowenia,
+    srilanka,
     stkittsnevis,
     stlucia,
     stvimcentgrenadyny,
     stanyzjednoczone,
     surinam,
+    syria,
     szkocja,
     szwajcaria,
     szwecja,
+    tadzykistan,
+    tajlandia,
+    timorwschodni,
     turcja,
+    turkmenistan,
     ukraina,
     urugwaj,
+    uzbeckistan,
     wegry,
     wielkabrytania,
+    wietnam,
     wenezuela,
-    wlochy
+    wlochy,
+    zjednoczoneemiratyarabskie,
 )

@@ -65,7 +65,7 @@ class MainActivity : ComponentActivity() {
 @OptIn(ExperimentalAnimationApi::class)
 @Composable
 fun AnimateVisibility(countries: MutableList<Panstwo>, propertiesInput: Set<String>) {
-    val animationDuration = 700
+    val animationDuration = 850
     val filterString = "Filter"
     val wynikiString = "Wyniki"
     var properties by remember {
@@ -205,7 +205,7 @@ fun AnimateVisibility(countries: MutableList<Panstwo>, propertiesInput: Set<Stri
                         filter(countries, filterList)
                     ) { index, country ->
                         Row(
-                            modifier = Modifier.height(100.dp)
+                            modifier = Modifier.height(120.dp)
                         ) {
                             Image(
                                 painter = painterResource(country.image),
