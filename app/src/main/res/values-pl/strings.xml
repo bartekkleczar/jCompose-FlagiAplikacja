@@ -60,6 +60,7 @@
     <string name="country_jemen">Jemen</string>
     <string name="country_jordania">Jordania</string>
     <string name="country_kanada">Kanada</string>
+    <string name="country_kambodza">Kambodża</string>
     <string name="country_katar">Katar</string>
     <string name="country_kazachstan">Kazachstan</string>
     <string name="country_kirgistan">Kirgistan</string>
@@ -179,6 +180,21 @@
     <string name="country_zambia">Zambia</string>
     <string name="country_zimbabwe">Zimbabwe</string>
 
+    <string name="country_australia">Australia</string>
+    <string name="country_mikronezja">Mikronezja</string>
+    <string name="country_fidzi">Fidżi</string>
+    <string name="country_kiribati">Kiribati</string>
+    <string name="country_republikamarshalla">Republika Marshalla</string>
+    <string name="country_nauru">Nauru</string>
+    <string name="country_nowazelandia">Nowa Zelandia</string>
+    <string name="country_palau">Palau</string>
+    <string name="country_papuanowagwinea">Papua-Nowa Gwinea</string>
+    <string name="country_samoa">Samoa</string>
+    <string name="country_wyspysalomona">Wyspy Salomona</string>
+    <string name="country_tonga">Tonga</string>
+    <string name="country_tuvalu">Tuvalu</string>
+    <string name="country_vanuatu">Vanuatu</string>
+
     <!--Colors and Layout-->
     <string name="color_white">Biały</string>
     <string name="color_red">Czerwony</string>
@@ -202,5 +218,6 @@
     <string name="continent_america">Ameryka (obie)</string>
     <string name="continent_africa">Afryka</string>
     <string name="continent_asia">Azja</string>
+    <string name="continent_oceania">Australia i Oceania</string>
 
 </resources>

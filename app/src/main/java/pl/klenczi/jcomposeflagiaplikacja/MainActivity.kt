@@ -55,6 +55,7 @@ class MainActivity : ComponentActivity() {
             val asia = r.getString(R.string.continent_asia)
             val america = r.getString(R.string.continent_america)
             val africa = r.getString(R.string.continent_africa)
+            val oceania = r.getString(R.string.continent_oceania)
 
             val red = r.getString(R.string.color_red)
             val blue = r.getString(R.string.color_blue)
@@ -168,6 +169,7 @@ class MainActivity : ComponentActivity() {
             val japonia = Panstwo(getString(R.string.country_japonia), mutableSetOf(asia), mutableSetOf(red, white, other), R.drawable.japonia)
             val jemen = Panstwo(getString(R.string.country_jemen), mutableSetOf(asia), mutableSetOf(red, white, black, horizontal), R.drawable.jemen)
             val jordania = Panstwo(getString(R.string.country_jordania), mutableSetOf(asia), mutableSetOf(black, white, green, red, horizontal), R.drawable.jordania)
+            val kambodza = Panstwo(getString(R.string.country_kambodza), mutableSetOf(asia), mutableSetOf(blue, white, red, horizontal), R.drawable.kambodza)
             val kazachstan = Panstwo(getString(R.string.country_kazachstan), mutableSetOf(asia), mutableSetOf(blue, yellow, other), R.drawable.kazachstan)
             val kirgistan = Panstwo(getString(R.string.country_kirgistan), mutableSetOf(asia), mutableSetOf(red, yellow, other), R.drawable.kirgistan)
             val koreapolnocna = Panstwo(getString(R.string.country_koreapolnocna), mutableSetOf(asia), mutableSetOf(red, white, blue, horizontal), R.drawable.koreapolnocna)
@@ -247,6 +249,21 @@ class MainActivity : ComponentActivity() {
             val zambia = Panstwo(r.getString(R.string.country_zambia), mutableSetOf(africa), mutableSetOf(green, orange, black, red, other), R.drawable.zambia)
             val zimbabwe = Panstwo(r.getString(R.string.country_zimbabwe), mutableSetOf(africa), mutableSetOf(green, yellow, red, white, black, horizontal), R.drawable.zimbabwe)
 
+            val australia = Panstwo(getString(R.string.country_australia), mutableSetOf(oceania), mutableSetOf(red, white, blue), R.drawable.australia)
+            val mikronezja = Panstwo(getString(R.string.country_mikronezja), mutableSetOf(oceania), mutableSetOf(blue, white), R.drawable.mikronezja)
+            val fidzi = Panstwo(getString(R.string.country_fidzi), mutableSetOf(oceania), mutableSetOf(blue, yellow), R.drawable.fidzi)
+            val kiribati = Panstwo(getString(R.string.country_kiribati), mutableSetOf(oceania), mutableSetOf(red, white), R.drawable.kiribati)
+            val republikaMarshalla = Panstwo(getString(R.string.country_republikamarshalla), mutableSetOf(oceania), mutableSetOf(blue, white), R.drawable.republikamarshalla)
+            val nauru = Panstwo(getString(R.string.country_nauru), mutableSetOf(oceania), mutableSetOf(blue, yellow), R.drawable.nauru)
+            val nowaZelandia = Panstwo(getString(R.string.country_nowazelandia), mutableSetOf(oceania), mutableSetOf(red, white, blue), R.drawable.nowazelandia)
+            val palau = Panstwo(getString(R.string.country_palau), mutableSetOf(oceania), mutableSetOf(blue, yellow), R.drawable.palau)
+            val papuaNowaGwinea = Panstwo(getString(R.string.country_papuanowagwinea), mutableSetOf(oceania), mutableSetOf(red, black, yellow), R.drawable.papuanowagwinea)
+            val samoa = Panstwo(getString(R.string.country_samoa), mutableSetOf(oceania), mutableSetOf(red, blue), R.drawable.samoa)
+            val wyspySalomona = Panstwo(getString(R.string.country_wyspysalomona), mutableSetOf(oceania), mutableSetOf(blue, green, yellow), R.drawable.wyspysalomona)
+            val tonga = Panstwo(getString(R.string.country_tonga), mutableSetOf(oceania), mutableSetOf(red, white), R.drawable.tonga)
+            val tuvalu = Panstwo(getString(R.string.country_tuvalu), mutableSetOf(oceania), mutableSetOf(blue, yellow), R.drawable.tuvalu)
+            val vanuatu = Panstwo(getString(R.string.country_vanuatu), mutableSetOf(oceania), mutableSetOf(red, green, black), R.drawable.vanuatu)
+
             val countriesList = mutableListOf(
                 afganistan,
                 albania,
@@ -305,6 +322,7 @@ class MainActivity : ComponentActivity() {
                 jemen,
                 jordania,
                 kanada,
+                kambodza,
                 katar,
                 kazachstan,
                 kirgistan,
@@ -421,7 +439,21 @@ class MainActivity : ComponentActivity() {
                 uganda,
                 zambia,
                 zimbabwe,
-                mozambique
+                mozambique,
+                australia,
+                mikronezja,
+                fidzi,
+                kiribati,
+                republikaMarshalla,
+                nauru,
+                nowaZelandia,
+                palau,
+                papuaNowaGwinea,
+                samoa,
+                wyspySalomona,
+                tonga,
+                tuvalu,
+                vanuatu
             )
 
             Main(countriesList,
@@ -450,6 +482,7 @@ class MainActivity : ComponentActivity() {
                     america,
                     africa,
                     europe,
+                    oceania
                 )
             )
         }
@@ -545,12 +578,15 @@ fun Main(
                     }
                 }
                 //pacer(modifier = Modifier.height(5.dp))
-                Row {
+                Row(
+                    verticalAlignment = Alignment.CenterVertically
+                ) {
                     Column {
                         propertiesLayout.forEach { property ->
                             Row(
                                 modifier = Modifier
                                     .padding(4.dp)
+                                    .padding(bottom = 10.dp)
                                     .fillMaxWidth(0.4f)
                             ) {
                                 val checkedState = remember { mutableStateOf(false) }
