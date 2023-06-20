@@ -192,14 +192,15 @@
     <string name="shape_cross">Krzyż</string>
     <string name="shape_other">Inny</string>
 
-    <!--Button Texts-->
+    <!--Texts-->
     <string name="buttonText_filtry">Filtry</string>
     <string name="buttonText_wyniki">Wyniki</string>
+    <string name="text_count">Ilość</string>
 
     <!--Continents-->
     <string name="continent_europe">Europa</string>
     <string name="continent_america">Ameryka (obie)</string>
-    <string name="continent_africa">Afryca</string>
+    <string name="continent_africa">Afryka</string>
     <string name="continent_asia">Azja</string>
 
 </resources>

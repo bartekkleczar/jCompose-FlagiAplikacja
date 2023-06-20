@@ -191,9 +191,10 @@
     <string name="shape_cross">Cross</string>
     <string name="shape_other">Other</string>
 
-    <!--Button Texts-->
+    <!--Texts-->
     <string name="buttonText_filtry">Filter</string>
     <string name="buttonText_wyniki">Results</string>
+    <string name="text_count">Count</string>
 
     <!--Continents-->
     <string name="continent_asia">Asia</string>
